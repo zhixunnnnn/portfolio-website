@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio</title>
+    <meta
+      name="description"
+      content="Welcome my portfolio! I'm Zhi Xun, a student in Singapore Polytechnic studying Diploma in Information Technology"
+    />
+    <meta name="author" content="Zhi Xun" />
+    <meta property="og:title" content="Zhi Xun - Portfolio" />
+    <meta
+      property="og:description"
+      content="Explore my portfolio showcasing projects including web design, development, and UX/UI case studies."
+    />
+    <meta
+      property="og:image"
+      content="https://yourwebsite.com/assets/images/portfolio-preview.jpg"
+    />
+    <meta property="og:url" content="https://yourwebsite.com" />
+    <meta name="robots" content="index, follow" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="./assets/css/navmenu.css">
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Geist:wght@100..900&display=swap");
+      @import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+
+      body {
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+          Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+      }
+
+      /* Smooth animation for mobile drawer */
+      nav {
+        z-index: 50; /* Higher than overlay */
+      }
+      .mobile-menu {
+        transition: bottom 0.15s ease-in-out;
+      }
+      #overlay {
+        opacity: 0;
+        visibility: hidden;
+        background-color: rgba(0, 0, 0, 0.5); /* Darkens background */
+        transition: opacity 0.15s linear, visibility 0s linear 0.15s;
+        z-index: 40; /* Ensure it's above content */
+      }
+      #overlay.active {
+        opacity: 1;
+        visibility: visible;
+        transition-delay: 0s;
+      }
+    </style>
+    <script
+      src="https://kit.fontawesome.com/be3d7a8849.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+
+  <body
+    class="bg-gradient-to-b from-[#09203F] to-[#537895] bg-fixed min-h-screen opacity-0 transition-opacity duration-700 ease-out"
+  >
+    <!-- Global SVG Definitions (Hidden) -->
+    <svg width="0" height="0" class="absolute">
+      <defs>
+        <linearGradient id="gradientId" x1="0%" y1="0%" x2="0%" y2="100%">
+          <stop offset="0%" stop-color="#a3bded" />
+          <stop offset="100%" stop-color="#6991c7" />
+        </linearGradient>
+      </defs>
+    </svg>
+    <!-- Navbar -->
+    <nav
+      id="navbar"
+      class="fixed top-0 left-0 w-full z-50 bg-transparent transform -translate-y-full transition-all duration-700 ease-out pt-5"
+    >
+      <div
+        class="container mx-auto px-6 py-4 flex justify-between items-center"
+      >
+        <!-- Logo -->
+        <a href="/" class="text-2xl font-semibold text-gray-900">
+          <img
+            src="./assets/images/IMG_0427 Background Removed.png"
+            alt="Navbar Brand"
+            class="h-12 md:h-14 w-auto max-h-14"
+          />
+        </a>
+
+        <div class="relative">
+          <!-- Hamburger Menu -->
+          <div
+            class="relative h-12 md:h-14 max-h-14 w-12 md:w-14 max-w-14 p-3 bg-gradient-to-b from-[#a3bded] to-[#6991c7] rounded-full"
+          >
+            <input
+              id="menu-toggle"
+              type="checkbox"
+              class="absolute w-full h-full opacity-0 cursor-pointer"
+            />
+
+            <!-- SVG Icon -->
+            <svg viewBox="0 0 50 50" class="w-full h-full">
+              <path
+                d="M6 11L44 11"
+                class="lineTop line transition-all duration-500 ease-in-out"
+                stroke-linecap="round"
+              />
+              <path
+                d="M6 24H43"
+                class="lineMid line transition-all duration-500 ease-in-out"
+                stroke-linecap="round"
+              />
+              <path
+                d="M6 37H43"
+                class="lineBottom line transition-all duration-500 ease-in-out"
+                stroke-linecap="round"
+              />
+            </svg>
+          </div>
+
+          <!-- Dropdown Menu -->
+          <div
+            id="dropdown-menu"
+            class="absolute right-0 mt-3 w-48 bg-[fdfff5] shadow-lg rounded-xl p-2 opacity-0 scale-95 transition-all duration-500 ease-out origin-top-right backdrop-blur-lg"
+          >
+            <!-- Menu Items -->
+            <a
+              href="#"
+              class="flex items-center space-x-3 px-4 py-3 text-gray-700 font-medium hover:bg-gray-100 rounded-lg transition"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="2.5"
+                stroke="url('#gradientId')"
+                class="size-6"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="m2.25 12 8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25"
+                />
+              </svg>
+
+              <span>Home</span>
+            </a>
+            <a
+              href="#"
+              class="flex items-center space-x-3 px-4 py-3 text-gray-700 font-medium hover:bg-gray-100 rounded-lg transition"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="2.5"
+                stroke="url('#gradientId')"
+                class="size-6"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M2.25 12.75V12A2.25 2.25 0 0 1 4.5 9.75h15A2.25 2.25 0 0 1 21.75 12v.75m-8.69-6.44-2.12-2.12a1.5 1.5 0 0 0-1.061-.44H4.5A2.25 2.25 0 0 0 2.25 6v12a2.25 2.25 0 0 0 2.25 2.25h15A2.25 2.25 0 0 0 21.75 18V9a2.25 2.25 0 0 0-2.25-2.25h-5.379a1.5 1.5 0 0 1-1.06-.44Z"
+                />
+              </svg>
+
+              <span>Projects</span>
+            </a>
+            <a
+              href="#"
+              class="flex items-center space-x-3 px-4 py-3 text-gray-700 font-medium hover:bg-gray-100 rounded-lg transition"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="2.5"
+                stroke="url('#gradientId')"
+                class="size-6"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M12 21v-8.25M15.75 21v-8.25M8.25 21v-8.25M3 9l9-6 9 6m-1.5 12V10.332A48.36 48.36 0 0 0 12 9.75c-2.551 0-5.056.2-7.5.582V21M3 21h18M12 6.75h.008v.008H12V6.75Z"
+                />
+              </svg>
+
+              <span>Education</span>
+            </a>
+            <a
+              href="mailto:zhixunnnn@icloud.com"
+              class="flex items-center space-x-3 px-4 py-3 text-gray-700 font-medium hover:bg-gray-100 rounded-lg transition"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="2.5"
+                stroke="url('#gradientId')"
+                class="size-6"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M15.75 6a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0ZM4.501 20.118a7.5 7.5 0 0 1 14.998 0A17.933 17.933 0 0 1 12 21.75c-2.676 0-5.216-.584-7.499-1.632Z"
+                />
+              </svg>
+
+              <span>Contact</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section
+      id="hero"
+      class="relative h-[60vh] flex flex-col justify-center items-center text-center px-6 overflow-hidden transition-opacity duration-500 ease-out"
+    >
+      <h1
+        class="relative text-6xl md:text-5xl sm:text-3xl font-extrabold bg-gradient-to-l from-[#ffffff] to-[#dcf9ff] bg-clip-text text-transparent"
+      >
+        Hi! I'm Zhi Xun
+      </h1>
+      <div class="flex items-center space-x-1 mt-3">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke-width="1.5"
+          stroke="#e5e7eb"
+          class="size-6"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M15 10.5a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"
+          />
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1 1 15 0Z"
+          />
+        </svg>
+
+        <p class="text-gray-200 text-lg font-semibold">Singapore, SG</p>
+      </div>
+      <p
+        class="relative text-xl md:text-lg sm:text-base text-gray-400 mt-3 font-medium"
+      >
+        Currently a second-year student at Singapore Polytechnic,<br />
+        studying Diploma in Information Technology.
+      </p>
+    </section>
+
+    <!-- Cards Section -->
+    <div class="container mx-auto py-12 px-6 flex flex-col gap-12 items-center">
+      <!-- Card 1 -->
+      <a
+        href="./pages/projects/sp70.html"
+        class="mb-8 group flex flex-col lg:flex-row max-w-5xl items-center bg-gray-200 backdrop-blur-lg p-6 rounded-[1.3rem] transition-all duration-[600ms] ease-out hover:bg-[#fdfff5] hover:shadow-[20px_20px_60px_#bebebe,-20px_-20px_60px_#ffffff] hover:scale-[1.01] block"
+      >
+        <!-- Text Section -->
+        <div class="lg:w-1/2 text-left h-full px-5">
+          <h3 class="text-3xl font-bold mb-4">SP70 Website</h3>
+          <p class="text-gray-600 font-medium">
+            A front-end website, developed for Semester 1. Its responsive and
+            user-friendly, aimed to celebrate 70 years of Singapore Polytechnic
+            through an interactive layout.
+          </p>
+          <span
+            class="mt-4 inline-flex items-center text-blue-500 font-semibold text-lg"
+          >
+            Read More
+            <span
+              class="ml-2 transition-transform duration-200 group-hover:translate-x-1"
+              >→</span
+            >
+          </span>
+        </div>
+
+        <!-- Image Section -->
+        <div class="lg:w-2/3 mt-6 lg:mt-0 flex justify-center w-full">
+          <img
+            src="./assets/images/sp70.jpg"
+            alt="Education"
+            class="rounded-lg w-full"
+          />
+        </div>
+      </a>
+
+      <a
+        href="#"
+        class="mb-8 group flex flex-col lg:flex-row max-w-5xl items-center bg-gray-200 backdrop-blur-lg p-6 rounded-[1.3rem] transition-all duration-[600ms] ease-out hover:bg-[#fdfff5] hover:shadow-[20px_20px_60px_#bebebe,-20px_-20px_60px_#ffffff] hover:scale-[1.01] block"
+      >
+        <!-- Text Section -->
+        <div class="lg:w-1/2 text-left h-full px-5">
+          <h3 class="text-3xl font-bold mb-4">Turbo Tracks</h3>
+          <p class="text-gray-600 font-medium">
+            A web-based gamified fitness challenge platform built with JWT,
+            Node.js, MySQL and Express among others. Users can participate in
+            challenges, earn points and buy cars to race.
+          </p>
+          <span
+            class="mt-4 inline-flex items-center font-semibold text-lg text-[#6991c7]"
+          >
+            Read More
+            <span
+              class="ml-2 transition-transform duration-200 group-hover:translate-x-1"
+              >→</span
+            >
+          </span>
+        </div>
+
+        <!-- Image Section -->
+        <div class="lg:w-2/3 mt-6 lg:mt-0 flex justify-center h-full">
+          <img
+            src="./assets/images/sp70.jpg"
+            alt="Education"
+            class="rounded-lg w-full"
+          />
+        </div>
+      </a>
+
+      <a
+        href="#"
+        class="group flex flex-col lg:flex-row max-w-5xl items-center bg-gray-200 backdrop-blur-lg p-6 rounded-[1.3rem] transition-all duration-[600ms] ease-out hover:bg-[#fdfff5] hover:shadow-[20px_20px_60px_#bebebe,-20px_-20px_60px_#ffffff] hover:scale-[1.01] block"
+      >
+        <!-- Text Section -->
+        <div class="lg:w-1/2 text-left h-full px-5">
+          <h3 class="text-3xl font-bold mb-4">Redesigned SP App</h3>
+          <p class="text-gray-600 font-medium">
+            We redesigned the SP app for a cleaner interface, and seamless access
+            to essential features. The app prioritizes usability, uniform
+            design, and a smarter campus map.
+          </p>
+          <span
+            class="mt-4 inline-flex items-center text-blue-500 font-semibold text-lg"
+          >
+            Read More
+            <span
+              class="ml-2 transition-transform duration-200 group-hover:translate-x-1"
+              >→</span
+            >
+          </span>
+        </div>
+
+        <!-- Image Section -->
+        <div class="lg:w-2/3 mt-6 lg:mt-0 flex justify-center h-full">
+          <img
+            src="./assets/images/sp70.jpg"
+            alt="Education"
+            class="rounded-lg w-full"
+          />
+        </div>
+      </a>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-8 mt-12">
+      <div
+        class="container mx-auto px-6 flex flex-col md:flex-row justify-between items-center text-center md:text-left"
+      >
+        <!-- Middle Section: Navigation Links -->
+        <div class="flex space-x-6 text-gray-400 text-sm">
+          <a href="#" class="hover:text-white transition duration-200">Home</a>
+          <a href="#" class="hover:text-white transition duration-200"
+            >Projects</a
+          >
+          <a href="#" class="hover:text-white transition duration-200"
+            >Education</a
+          >
+          <a href="#" class="hover:text-white transition duration-200"
+            >Contact</a
+          >
+        </div>
+
+        <!-- Right Section: Social Links -->
+        <div class="flex space-x-4 mt-6 md:mt-0">
+          <a
+            href="https://github.com/zhixunnnnn"
+            target="_blank"
+            class="text-gray-400 hover:text-white transition duration-200"
+          >
+            <i class="fab fa-github text-xl"></i>
+          </a>
+          <a
+            href="https://www.linkedin.com/in/zhixunnn/"
+            target="_blank"
+            class="text-gray-400 hover:text-white transition duration-200"
+          >
+            <i class="fab fa-linkedin text-xl"></i>
+          </a>
+          <a
+            href="mailto:zhixunnnn@icloud.com"
+            class="text-gray-400 hover:text-white transition duration-200"
+          >
+            <i class="fas fa-envelope text-xl"></i>
+          </a>
+        </div>
+      </div>
+
+      <!-- Bottom Section: Copyright -->
+      <div class="text-center text-gray-500 text-sm mt-6">
+        &copy; Copyright <span id="year"></span> Zhi Xun. All rights reserved.
+      </div>
+
+      <!-- Script to auto-update year -->
+      <script>
+        document.getElementById("year").textContent = new Date().getFullYear();
+      </script>
+    </footer>
+
+    <!-- JavaScript for Menu -->
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        // Step 1: Fade in the body first
+        setTimeout(() => {
+          document.body.classList.remove("opacity-0");
+
+          // Step 2: After 0.5s, slide down the navbar
+          setTimeout(() => {
+            document
+              .getElementById("navbar")
+              .classList.remove("-translate-y-full");
+            document.getElementById("navbar").classList.add("translate-y-0");
+          }, 500); // 0.5s delay before navbar appears
+        }, 500); // Page fades in after 1s (adjustable)
+      });
+
+      $(document).ready(function () {
+        $("#menu-toggle").click(function (event) {
+          event.stopPropagation(); // Prevent immediate closing when clicking toggle
+          $("#dropdown-menu").toggleClass(
+            "opacity-0 scale-95 opacity-100 scale-100"
+          );
+        });
+
+        // Close menu and uncheck checkbox when clicking outside
+        $(document).click(function (event) {
+          if (!$(event.target).closest("#menu-toggle, #dropdown-menu").length) {
+            $("#dropdown-menu")
+              .addClass("opacity-0 scale-95")
+              .removeClass("opacity-100 scale-100");
+            $("#menu-toggle").prop("checked", false); // Uncheck the checkbox
+          }
+        });
+      });
+
+      document.addEventListener("DOMContentLoaded", function () {
+        const heroSection = document.getElementById("hero");
+        let lastScrollTop = 0;
+
+        window.addEventListener("scroll", function () {
+          let scrollTop = window.scrollY || document.documentElement.scrollTop;
+          let scrollAmount = Math.min(1, scrollTop / 150); // Normalize to range 0-1
+
+          if (scrollTop > lastScrollTop) {
+            // Scrolling Down → Fade Out
+            heroSection.style.opacity = 1 - scrollAmount;
+            heroSection.style.transform = `translateY(${scrollAmount * 100}px)`;
+          } else {
+            // Scrolling Up → Fade In
+            heroSection.style.opacity = 1 - scrollAmount;
+            heroSection.style.transform = `translateY(${scrollAmount * 100}px)`;
+          }
+
+          lastScrollTop = scrollTop <= 0 ? 0 : scrollTop; // Prevent negative values
+        });
+      });
+    </script>
+  </body>
+</html>

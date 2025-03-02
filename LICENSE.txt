@@ -1,0 +1,32 @@
+LICENSE AGREEMENT
+
+This License Agreement ("Agreement") governs the use of this website and any of its contents ("Website"). By accessing or using the Website, you agree to the following terms:
+
+1. **Permitted Use**
+   - The Website and its contents are for personal, organizational, or company consumption only.
+   - You may view, interact with, and utilize the Website for informational purposes within your organization.
+
+2. **Restrictions**
+   - No portion of the Website may be copied, reproduced, distributed, republished, or otherwise reused in any form without explicit written permission from the owner.
+   - You may not modify, adapt, or create derivative works based on the Website.
+   - Commercial use, redistribution, or resale of any content from the Website is strictly prohibited.
+   - Reverse engineering, decompiling, or attempting to extract source code from the Website is prohibited.
+
+3. **Intellectual Property**
+   - All intellectual property rights, including but not limited to text, images, graphics, software, and branding, remain the property of the owner.
+   - Unauthorized use of any trademarks, service marks, or logos appearing on the Website is strictly prohibited.
+
+4. **Disclaimer**
+   - The Website is provided "as is" without any warranties of any kind, express or implied.
+   - The owner is not responsible for any direct, indirect, incidental, or consequential damages arising from the use of the Website.
+
+5. **Enforcement**
+   - Any violations of this Agreement may result in legal action.
+   - The owner reserves the right to terminate access to the Website for any user violating these terms.
+
+6. **Modifications**
+   - The owner reserves the right to update or modify this Agreement at any time without prior notice.
+
+For inquiries regarding this License, please contact the website owner.
+
+**Last Updated:** 18 February 2025

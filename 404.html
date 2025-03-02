@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>404 - Page Not Found</title>
+    <meta
+      name="description"
+      content="Oops! The page you're looking for doesn't exist. Check out my projects or return to the homepage."
+    />
+    <meta name="robots" content="noindex, follow" />
+    <style>
+
+    </style>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  </head>
+  <body
+    class="bg-[#fdfff5] text-white flex items-center justify-center h-screen"
+  >
+    <div class="text-center px-6">
+      <h1 class="text-9xl font-bold text-gray-700 animate-pulse">404</h1>
+      <p class="text-xl text-gray-400 mt-4">
+        Oops! The page you are looking for doesn't exist.
+      </p>
+      <p class="text-lg text-gray-500">
+        But don't worry, you can go back to the homepage.
+      </p>
+      <a
+        href="/"
+        class="mt-6 inline-block px-6 py-3 bg-gray-600 hover:bg-gray-500 text-white font-semibold rounded-lg transition duration-300"
+        >Return Home</a
+      >
+    </div>
+
+    <script>
+      gsap.from("h1", { duration: 1, y: -50, opacity: 0, ease: "bounce.out" });
+      gsap.from("p", {
+        duration: 1.5,
+        y: 20,
+        opacity: 0,
+        stagger: 0.2,
+        ease: "power2.out",
+      });
+      gsap.from("a", {
+        duration: 1.5,
+        scale: 0.5,
+        opacity: 0,
+        ease: "back.out(1.7)",
+      });
+    </script>
+  </body>
+</html>

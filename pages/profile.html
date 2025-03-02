@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Profile Page</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script
+      src="https://kit.fontawesome.com/be3d7a8849.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body class="bg-gray-100 text-gray-800">
+    <nav class="fixed top-0 left-0 w-full z-50 bg-transparent">
+      <div class="container mx-auto px-6 py-4 flex justify-around items-center">
+        <a
+          href="../index.html"
+          class="text-2xl font-semibold text-gray-900 shadow-[5px_5px_18px_#9f9a9a] rounded-3xl"
+        >
+          <img
+            src="./assets/images/IMG_0427 Background Removed.png"
+            alt="Navbar Brand"
+            class="h-8 md:h-10 lg:h-12 w-auto max-h-14"
+          />
+        </a>
+        <button
+          id="menu-toggle"
+          class="md:hidden text-gray-900 focus:outline-none backdrop-blur-lg rounded-full"
+        >
+          <svg
+            class="w-7 h-7"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M4 6h16M4 12h16M4 18h16"
+            ></path>
+          </svg>
+        </button>
+        <div
+          class="hidden md:flex p-3 px-5 space-x-6 backdrop-blur-lg rounded-full shadow-[20px_20px_60px_#bebebe,-20px_-20px_60px_#ffffff]"
+        >
+          <a
+            href="#"
+            class="text-gray-700 font-medium duration-[200ms] hover:text-gray-900"
+            >Home</a
+          >
+          <a
+            href="#"
+            class="text-gray-700 font-medium duration-[200ms] hover:text-gray-900"
+            >Projects</a
+          >
+          <a
+            href="#"
+            class="text-gray-700 font-medium duration-[200ms] hover:text-gray-900"
+            >Education</a
+          >
+          <a
+            href="#"
+            class="text-gray-700 font-medium duration-[200ms] hover:text-gray-900"
+            >Contact</a
+          >
+        </div>
+      </div>
+    </nav>
+
+    <!-- Mobile Drawer -->
+    <div
+      id="overlay"
+      class="fixed inset-0 bg-black bg-opacity-50 hidden z-500"
+    ></div>
+    <div
+      id="mobile-menu"
+      class="fixed bottom-[-100%] left-0 w-full bg-gray-900 text-white p-6 rounded-t-lg mobile-menu z-50"
+    >
+      <a href="#" class="block py-2 text-lg font-medium duration-[200ms]"
+        >Home</a
+      >
+      <a href="#" class="block py-2 text-lg font-medium duration-[200ms]"
+        >Projects</a
+      >
+      <a href="#" class="block py-2 text-lg font-medium duration-[200ms]"
+        >Education</a
+      >
+      <a href="#" class="block py-2 text-lg font-medium duration-[200ms]"
+        >Contact</a
+      >
+    </div>
+
+    <div class="text-center mt-[7rem]">
+      <img
+        class="mx-auto w-32 h-32 rounded-full border-4 border-gray-300"
+        src="https://via.placeholder.com/300"
+        alt="Profile Picture"
+      />
+      <h1 class="text-2xl font-semibold mt-4">Chew Zhi Xun</h1>
+      <p class="text-gray-600">Student at Singapore Polytechnic</p>
+
+      <!-- Social Media Icons -->
+      <div class="flex justify-center space-x-4 mt-4">
+        <a href="#" class="text-gray-600 hover:text-blue-500"
+          ><i class="fas fa-globe text-xl"></i
+        ></a>
+        <a href="#" class="text-gray-600 hover:text-blue-500"
+          ><i class="fab fa-github text-xl"></i
+        ></a>
+        <a href="#" class="text-gray-600 hover:text-blue-500"
+          ><i class="fab fa-linkedin text-xl"></i
+        ></a>
+        <a href="#" class="text-gray-600 hover:text-blue-500"
+          ><i class="fab fa-twitter text-xl"></i
+        ></a>
+      </div>
+    </div>
+
+    <!-- Main Container -->
+    <div class="max-w-5xl mx-auto p-8 bg-white rounded-lg shadow-lg mt-20">
+      <!-- Profile Section -->
+
+      <!-- About Me -->
+      <div class="mt-10">
+        <h2 class="text-xl font-semibold mb-3">About Me</h2>
+        <p class="text-gray-600">
+          I'm a student specializing in software development. My expertise
+          include back-end libraries like JWT, Bcrypt, Express as well as modern
+          CSS frameworks like Bootstrap and Tailwind.
+        </p>
+      </div>
+
+      <!-- Personal Information -->
+      <div class="mt-10">
+        <h2 class="text-xl font-semibold mb-3">Personal Information</h2>
+        <p><strong>Email</strong> your.email@example.com</p>
+        <p><strong>Phone</strong> +1 (123) 456-7890</p>
+        <p><strong>Location</strong> Singapore</p>
+        <p><strong>Languages</strong> English, Chinese</p>
+      </div>
+
+      <!-- Skills Section with Icons -->
+      <div class="mt-10">
+        <h2 class="text-md font-bold text-gray-500 mb-3">TECH STACK</h2>
+        <div class="flex flex-wrap gap-2">
+          <span
+            class="bg-gray-200 text-gray-700 px-3 py-1 rounded-lg flex items-center space-x-2"
+          >
+            <i class="fab fa-html5 text-orange-500"></i>
+            <span class="font-medium">HTML</span>
+          </span>
+          <span
+            class="bg-gray-200 text-gray-700 px-3 py-1 rounded-lg flex items-center space-x-2"
+          >
+            <i class="fab fa-css3-alt text-blue-500"></i>
+            <span class="font-medium">CSS</span>
+          </span>
+          <span
+            class="bg-gray-200 text-gray-700 px-3 py-1 rounded-lg flex items-center space-x-2"
+          >
+            <i class="fab fa-js text-yellow-500"></i>
+            <span class="font-medium">JavaScript</span>
+          </span>
+          <span
+            class="bg-gray-200 text-gray-700 px-3 py-1 rounded-lg flex items-center space-x-2"
+          >
+            <img
+              src="../assets/icons/mysql.svg"
+              alt="MySQL"
+              class="w-5 h-5 flex-shrink-0"
+            />
+            <span class="font-medium">MySQL</span>
+          </span>
+          <span
+            class="bg-gray-200 text-gray-700 px-3 py-1 rounded-lg flex items-center space-x-2"
+          >
+            <svg
+              class="w-5 h-5"
+              viewBox="0 0 24 24"
+              fill="#06B6D4"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M12.001,4.8c-3.2,0-5.2,1.6-6,4.8c1.2-1.6,2.6-2.2,4.2-1.8c0.913,0.228,1.565,0.89,2.288,1.624 
+                C13.666,10.618,15.027,12,18.001,12c3.2,0,5.2-1.6,6-4.8c-1.2,1.6-2.6,2.2-4.2,1.8c-0.913-0.228-1.565-0.89-2.288-1.624 
+                C16.337,6.182,14.976,4.8,12.001,4.8z M6.001,12c-3.2,0-5.2,1.6-6,4.8c1.2-1.6,2.6-2.2,4.2-1.8c0.913,0.228,1.565,0.89,2.288,1.624 
+                c1.177,1.194,2.538,2.576,5.512,2.576c3.2,0,5.2-1.6,6-4.8c-1.2,1.6-2.6,2.2-4.2,1.8c-0.913-0.228-1.565-0.89-2.288-1.624 
+                C10.337,13.382,8.976,12,6.001,12z"
+              />
+            </svg>
+            <span class="font-medium">Tailwind CSS</span>
+          </span>
+          <span
+            class="bg-gray-200 text-gray-700 px-3 py-1 rounded-lg flex items-center space-x-2"
+          >
+            <i class="fab fa-node-js text-green-500"></i>
+            <span class="font-medium">Node.js</span>
+          </span>
+          <span
+            class="bg-gray-200 text-gray-700 px-3 py-1 rounded-lg flex items-center space-x-2"
+          >
+            <i class="fab fa-git-alt text-red-500"></i>
+            <span class="font-medium">Git</span>
+          </span>
+        </div>
+      </div>
+
+      <!-- Experience -->
+      <div class="mt-10">
+        <h2 class="text-xl font-semibold mb-3">Experience</h2>
+        <ul class="list-disc list-inside text-gray-600">
+          <li>
+            <strong>Frontend Developer Intern - XYZ Company</strong> (2024 -
+            Present)
+          </li>
+          <li><strong>Freelance Web Developer</strong> (2023 - 2024)</li>
+        </ul>
+      </div>
+
+      <!-- Contact -->
+      <div class="mt-10">
+        <h2 class="text-xl font-semibold mb-3">Contact Me</h2>
+        <p class="text-gray-600 mb-4">
+          Feel free to reach out for collaborations or job opportunities.
+        </p>
+        <a
+          href="mailto:zhixunnnn@icloud.com"
+          class="bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600"
+          >Send Email</a
+        >
+      </div>
+
+      <!-- Footer -->
+      <footer class="text-center text-gray-500 text-sm mt-12">
+        &copy; 2025 Your Name. All rights reserved.
+      </footer>
+    </div>
+    <!-- End of Main Container -->
+    <script>
+      document.querySelectorAll("a").forEach((link) => {
+        link.addEventListener("click", function (event) {
+          event.preventDefault(); // Prevent full page reload
+
+          let targetURL = this.href;
+
+          fetch(targetURL)
+            .then((response) => response.text())
+            .then((html) => {
+              document.body.style.opacity = 0; // Fade out
+              setTimeout(() => {
+                document.body.innerHTML = html;
+                document.body.style.opacity = 1; // Fade in
+              }, 300);
+            });
+        });
+      });
+    </script>
+  </body>
+</html>

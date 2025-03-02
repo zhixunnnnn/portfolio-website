@@ -1,0 +1,52 @@
+nav {
+  z-index: 50; /* Higher than overlay */
+}
+.mobile-menu {
+  transition: bottom 0.15s ease-in-out;
+}
+#overlay {
+  opacity: 0;
+  visibility: hidden;
+  background-color: rgba(0, 0, 0, 0.5); /* Darkens background */
+  transition: opacity 0.15s linear, visibility 0s linear 0.15s;
+  z-index: 40; /* Ensure it's above content */
+}
+#overlay.active {
+  opacity: 1;
+  visibility: visible;
+  transition-delay: 0s;
+}
+.line {
+  stroke-width: 6px;
+  stroke: white;
+  transition: stroke 0.5s, transform 0.5s, stroke-dashoffset 0.5s;
+}
+.lineTop {
+  stroke-dasharray: 40 40;
+  stroke-dashoffset: 25;
+}
+.lineBottom {
+  stroke-dasharray: 40 40;
+  stroke-dashoffset: 60;
+}
+.lineMid {
+  stroke-dasharray: 40 40;
+}
+
+/* Toggle Behavior */
+#menu-toggle:checked + svg .line {
+  stroke: white;
+}
+#menu-toggle:checked + svg .lineTop {
+  stroke-dashoffset: 0;
+  transform-origin: left;
+  transform: rotateZ(45deg) translate(-7px, -5px);
+}
+#menu-toggle:checked + svg .lineMid {
+  stroke-dashoffset: 40;
+}
+#menu-toggle:checked + svg .lineBottom {
+  stroke-dashoffset: 0;
+  transform-origin: left;
+  transform: rotateZ(-45deg) translate(-5px, 5px);
+}
