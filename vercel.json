@@ -1,0 +1,7 @@
+{
+     "rewrites": [
+       { "source": "/projects/sp70", "destination": "/projects/sp70/index.html" },
+       { "source": "/projects/profile", "destination": "/projects/profile/index.html" },
+       { "source": "/projects", "destination": "/projects/index.html" }
+     ]
+   }

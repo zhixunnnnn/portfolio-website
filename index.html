@@ -22,7 +22,7 @@
     <meta name="robots" content="index, follow" />
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <link rel="stylesheet" href="./assets/css/navmenu.css">
+    <link rel="stylesheet" href="./assets/css/navmenu.css" />
     <style>
       @import url("https://fonts.googleapis.com/css2?family=Geist:wght@100..900&display=swap");
       @import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
@@ -61,7 +61,6 @@
   <body
     class="bg-gradient-to-b from-[#09203F] to-[#537895] bg-fixed min-h-screen opacity-0 transition-opacity duration-700 ease-out"
   >
-    <!-- Global SVG Definitions (Hidden) -->
     <svg width="0" height="0" class="absolute">
       <defs>
         <linearGradient id="gradientId" x1="0%" y1="0%" x2="0%" y2="100%">
@@ -70,7 +69,7 @@
         </linearGradient>
       </defs>
     </svg>
-    <!-- Navbar -->
+
     <nav
       id="navbar"
       class="fixed top-0 left-0 w-full z-50 bg-transparent transform -translate-y-full transition-all duration-700 ease-out pt-5"
@@ -78,7 +77,6 @@
       <div
         class="container mx-auto px-6 py-4 flex justify-between items-center"
       >
-        <!-- Logo -->
         <a href="/" class="text-2xl font-semibold text-gray-900">
           <img
             src="./assets/images/IMG_0427 Background Removed.png"
@@ -88,7 +86,6 @@
         </a>
 
         <div class="relative">
-          <!-- Hamburger Menu -->
           <div
             class="relative h-12 md:h-14 max-h-14 w-12 md:w-14 max-w-14 p-3 bg-gradient-to-b from-[#a3bded] to-[#6991c7] rounded-full"
           >
@@ -97,8 +94,6 @@
               type="checkbox"
               class="absolute w-full h-full opacity-0 cursor-pointer"
             />
-
-            <!-- SVG Icon -->
             <svg viewBox="0 0 50 50" class="w-full h-full">
               <path
                 d="M6 11L44 11"
@@ -118,12 +113,10 @@
             </svg>
           </div>
 
-          <!-- Dropdown Menu -->
           <div
             id="dropdown-menu"
             class="absolute right-0 mt-3 w-48 bg-[fdfff5] shadow-lg rounded-xl p-2 opacity-0 scale-95 transition-all duration-500 ease-out origin-top-right backdrop-blur-lg"
           >
-            <!-- Menu Items -->
             <a
               href="#"
               class="flex items-center space-x-3 px-4 py-3 text-gray-700 font-medium hover:bg-gray-100 rounded-lg transition"
@@ -213,13 +206,12 @@
       </div>
     </nav>
 
-    <!-- Hero Section -->
     <section
       id="hero"
       class="relative h-[60vh] flex flex-col justify-center items-center text-center px-6 overflow-hidden transition-opacity duration-500 ease-out"
     >
       <h1
-        class="relative text-6xl md:text-5xl sm:text-3xl font-extrabold bg-gradient-to-l from-[#ffffff] to-[#dcf9ff] bg-clip-text text-transparent"
+        class="relative text-6xl md:text-5xl sm:text-2xl font-extrabold bg-gradient-to-l from-[#ffffff] to-[#dcf9ff] bg-clip-text text-transparent"
       >
         Hi! I'm Zhi Xun
       </h1>
@@ -254,73 +246,73 @@
       </p>
     </section>
 
-    <!-- Cards Section -->
     <div class="container mx-auto py-12 px-6 flex flex-col gap-12 items-center">
-      <!-- Card 1 -->
       <a
-        href="./pages/projects/sp70.html"
-        class="mb-8 group flex flex-col lg:flex-row max-w-5xl items-center bg-gray-200 backdrop-blur-lg p-6 rounded-[1.3rem] transition-all duration-[600ms] ease-out hover:bg-[#fdfff5] hover:shadow-[20px_20px_60px_#bebebe,-20px_-20px_60px_#ffffff] hover:scale-[1.01] block"
+        href="/projects/sp70"
+        class="group flex flex-col lg:flex-row max-w-5xl items-center bg-white/10 backdrop-blur-[35px] p-6 rounded-[25px] transition-all duration-500 ease-out hover:shadow-[0px_8px_6px_rgba(0,0,0,0.05)] hover:scale-[1.02] hover:bg-white/20 relative"
       >
-        <!-- Text Section -->
         <div class="lg:w-1/2 text-left h-full px-5">
-          <h3 class="text-3xl font-bold mb-4">SP70 Website</h3>
-          <p class="text-gray-600 font-medium">
+          <h3 class="text-3xl font-bold mb-4 text-white">SP70 Website</h3>
+          <p class="text-gray-200 font-medium">
             A front-end website, developed for Semester 1. Its responsive and
             user-friendly, aimed to celebrate 70 years of Singapore Polytechnic
             through an interactive layout.
           </p>
           <span
-            class="mt-4 inline-flex items-center text-blue-500 font-semibold text-lg"
+            class="mt-4 inline-flex items-center text-blue-300 font-semibold text-lg"
           >
             Read More
             <span
               class="ml-2 transition-transform duration-200 group-hover:translate-x-1"
-              >→</span
             >
+              →
+            </span>
           </span>
         </div>
-
-        <!-- Image Section -->
         <div class="lg:w-2/3 mt-6 lg:mt-0 flex justify-center w-full">
           <img
             src="./assets/images/sp70.jpg"
-            alt="Education"
+            alt="Project Thumbnail"
             class="rounded-lg w-full"
           />
         </div>
+        <div
+          class="absolute inset-0 rounded-[25px] shadow-[inset_0_-1px_1px_rgba(255,255,255,0.1), inset_0_1px_1px_rgba(255,255,255,0.25)]"
+        ></div>
       </a>
 
       <a
         href="#"
-        class="mb-8 group flex flex-col lg:flex-row max-w-5xl items-center bg-gray-200 backdrop-blur-lg p-6 rounded-[1.3rem] transition-all duration-[600ms] ease-out hover:bg-[#fdfff5] hover:shadow-[20px_20px_60px_#bebebe,-20px_-20px_60px_#ffffff] hover:scale-[1.01] block"
+        class="group flex flex-col lg:flex-row max-w-5xl items-center bg-white/10 backdrop-blur-[35px] p-6 rounded-[25px] transition-all duration-500 ease-out hover:shadow-[0px_8px_6px_rgba(0,0,0,0.05)] hover:scale-[1.02] hover:bg-white/20 relative"
       >
-        <!-- Text Section -->
         <div class="lg:w-1/2 text-left h-full px-5">
-          <h3 class="text-3xl font-bold mb-4">Turbo Tracks</h3>
-          <p class="text-gray-600 font-medium">
+          <h3 class="text-3xl font-bold mb-4 text-white">Turbo Tracks</h3>
+          <p class="text-gray-200 font-medium">
             A web-based gamified fitness challenge platform built with JWT,
             Node.js, MySQL and Express among others. Users can participate in
             challenges, earn points and buy cars to race.
           </p>
           <span
-            class="mt-4 inline-flex items-center font-semibold text-lg text-[#6991c7]"
+            class="mt-4 inline-flex items-center text-blue-300 font-semibold text-lg"
           >
             Read More
             <span
               class="ml-2 transition-transform duration-200 group-hover:translate-x-1"
-              >→</span
             >
+              →
+            </span>
           </span>
         </div>
-
-        <!-- Image Section -->
-        <div class="lg:w-2/3 mt-6 lg:mt-0 flex justify-center h-full">
+        <div class="lg:w-2/3 mt-6 lg:mt-0 flex justify-center w-full">
           <img
             src="./assets/images/sp70.jpg"
-            alt="Education"
+            alt="Project Thumbnail"
             class="rounded-lg w-full"
           />
         </div>
+        <div
+          class="absolute inset-0 rounded-[25px] shadow-[inset_0_-1px_1px_rgba(255,255,255,0.1), inset_0_1px_1px_rgba(255,255,255,0.25)]"
+        ></div>
       </a>
 
       <a
@@ -331,8 +323,8 @@
         <div class="lg:w-1/2 text-left h-full px-5">
           <h3 class="text-3xl font-bold mb-4">Redesigned SP App</h3>
           <p class="text-gray-600 font-medium">
-            We redesigned the SP app for a cleaner interface, and seamless access
-            to essential features. The app prioritizes usability, uniform
+            We redesigned the SP app for a cleaner interface, and seamless
+            access to essential features. The app prioritizes usability, uniform
             design, and a smarter campus map.
           </p>
           <span
