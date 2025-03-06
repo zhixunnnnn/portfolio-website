@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SP70 Project - Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="../../assets/css/navmenu.css" />
+  </head>
+  <body class="bg-[#09090b] text-gray-900">
+     <div class="fixed inset-0 flex items-center justify-center -z-10">
+          <div class="w-[60vw] h-[50vh] bg-[#5c6b7b] opacity-40 blur-[120px] mix-blend-soft-light rounded-[40%]"></div>
+        </div>
+    <!-- Navbar -->
+    <nav
+      id="navbar"
+      class="fixed top-0 left-0 w-full z-50 bg-transparent transform -translate-y-full transition-all duration-700 ease-out pt-5"
+    >
+      <div
+        class="container mx-auto px-6 py-4 flex justify-between items-center"
+      >
+        <!-- Logo -->
+        <a href="/" class="text-2xl font-semibold text-gray-900">
+          <img
+            src="../../assets/images/IMG_0427 Background Removed.png"
+            alt="Navbar Brand"
+            class="h-12 md:h-14 w-auto max-h-14"
+          />
+        </a>
+
+        <div class="relative">
+          <!-- Hamburger Menu -->
+          <div
+            class="relative h-12 md:h-14 max-h-14 w-12 md:w-14 max-w-14 p-3 bg-gradient-to-b from-[#a3bded] to-[#6991c7] rounded-full"
+          >
+            <input
+              id="menu-toggle"
+              type="checkbox"
+              class="absolute w-full h-full opacity-0 cursor-pointer"
+            />
+
+            <!-- SVG Icon -->
+            <svg viewBox="0 0 50 50" class="w-full h-full">
+              <path
+                d="M6 11L44 11"
+                class="lineTop line transition-all duration-500 ease-in-out"
+                stroke-linecap="round"
+              />
+              <path
+                d="M6 24H43"
+                class="lineMid line transition-all duration-500 ease-in-out"
+                stroke-linecap="round"
+              />
+              <path
+                d="M6 37H43"
+                class="lineBottom line transition-all duration-500 ease-in-out"
+                stroke-linecap="round"
+              />
+            </svg>
+          </div>
+
+          <!-- Dropdown Menu -->
+          <div
+            id="dropdown-menu"
+            class="absolute right-0 mt-3 w-48 bg-[fdfff5] shadow-lg rounded-xl p-2 opacity-0 scale-95 transition-all duration-500 ease-out origin-top-right backdrop-blur-lg"
+          >
+            <!-- Menu Items -->
+            <a
+              href="#"
+              class="flex items-center space-x-3 px-4 py-3 text-gray-700 font-medium hover:bg-gray-100 rounded-lg transition"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="2.5"
+                stroke="url('#gradientId')"
+                class="size-6"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="m2.25 12 8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25"
+                />
+              </svg>
+
+              <span>Home</span>
+            </a>
+            <a
+              href="#"
+              class="flex items-center space-x-3 px-4 py-3 text-gray-700 font-medium hover:bg-gray-100 rounded-lg transition"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="2.5"
+                stroke="url('#gradientId')"
+                class="size-6"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M2.25 12.75V12A2.25 2.25 0 0 1 4.5 9.75h15A2.25 2.25 0 0 1 21.75 12v.75m-8.69-6.44-2.12-2.12a1.5 1.5 0 0 0-1.061-.44H4.5A2.25 2.25 0 0 0 2.25 6v12a2.25 2.25 0 0 0 2.25 2.25h15A2.25 2.25 0 0 0 21.75 18V9a2.25 2.25 0 0 0-2.25-2.25h-5.379a1.5 1.5 0 0 1-1.06-.44Z"
+                />
+              </svg>
+
+              <span>Projects</span>
+            </a>
+            <a
+              href="#"
+              class="flex items-center space-x-3 px-4 py-3 text-gray-700 font-medium hover:bg-gray-100 rounded-lg transition"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="2.5"
+                stroke="url('#gradientId')"
+                class="size-6"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M12 21v-8.25M15.75 21v-8.25M8.25 21v-8.25M3 9l9-6 9 6m-1.5 12V10.332A48.36 48.36 0 0 0 12 9.75c-2.551 0-5.056.2-7.5.582V21M3 21h18M12 6.75h.008v.008H12V6.75Z"
+                />
+              </svg>
+
+              <span>Education</span>
+            </a>
+            <a
+              href="mailto:zhixunnnn@icloud.com"
+              class="flex items-center space-x-3 px-4 py-3 text-gray-700 font-medium hover:bg-gray-100 rounded-lg transition"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="2.5"
+                stroke="url('#gradientId')"
+                class="size-6"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M15.75 6a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0ZM4.501 20.118a7.5 7.5 0 0 1 14.998 0A17.933 17.933 0 0 1 12 21.75c-2.676 0-5.216-.584-7.499-1.632Z"
+                />
+              </svg>
+
+              <span>Contact</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Project Image -->
+    <section class="container mx-auto px-6 py-12 flex justify-center mt-20">
+      <img
+        src="../../assets/images/sp70.jpg"
+        alt="SP70 Website Project"
+        class="w-full h-auto"
+      />
+    </section>
+
+    <!-- Project Details -->
+    <section class="container mx-auto px-6 py-12 max-w-5xl">
+      <!-- Title Section (Spans Full Width) -->
+      <!-- Title Section (Spans Full Width) -->
+      <div class="mb-6">
+        <div class="flex flex-col items-start">
+          <!-- Enlarged SP Square Icon -->
+          <img
+            src="../../assets/images/sp-icon-square.jpeg"
+            alt="Project Icon"
+            class="w-16 h-16 rounded-xl shadow-xl mb-2 p-1 bg-white"
+          />
+
+          <!-- Title on a New Line -->
+          <h2 class="text-4xl font-extrabold text-gray-900">
+            SP70 Front-End Website
+          </h2>
+        </div>
+        <p class="text-gray-500 text-lg mt-2 font-semibold">
+          Singapore Polytechnic • 2024
+        </p>
+      </div>
+
+      <!-- Grid Layout -->
+      <div class="grid grid-cols-1 md:grid-cols-[2fr_1fr_1fr] gap-12">
+        <!-- Left: Project Description -->
+        <div>
+          <p class="text-gray-700 font-medium">
+            The SP70 Anniversary Website is an interactive platform celebrating
+            Singapore Polytechnic's 70-year history, showcasing its
+            achievements, growth, and future aspirations. The website allows
+            students, alumni, and faculty to explore key milestones, understand
+            SP's evolving role in education and industry, and engage with the
+            institution's vision for the future. It features a historical
+            timeline detailing SP's transformation, insights into upcoming
+            developments, and a message submission section for users to
+            contribute their own reflections and memories. With a modern and
+            responsive design, the website ensures a seamless browsing
+            experience across all devices, utilizing intuitive navigation,
+            smooth transitions, and visually engaging content. Whether visitors
+            are looking to revisit the past, learn about SP's current
+            initiatives, or share their own experiences, the site provides a
+            comprehensive and accessible way to celebrate SP's legacy and its
+            impact on generations of students.
+          </p>
+        </div>
+
+        <!-- Right: Roles, Responsibilities, Team -->
+        <div class="flex flex-col gap-6 text-gray-700 leading-loose">
+          <div>
+            <h3 class="font-semibold">ROLE</h3>
+            <p>Leader, Designer</p>
+          </div>
+
+          <div class="leading-loose">
+            <h3 class="font-semibold">RESPONSIBILITIES</h3>
+            <ul class="list-none space-y-1">
+              <li>UX/UI</li>
+              <li>System Design</li>
+              <li>Project Strategy</li>
+              <li>Prototyping</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="leading-loose">
+          <h3 class="font-semibold">TEAM</h3>
+          <p>Zhi Xun, Leader, Designer</p>
+          <p>Chong Guang, Presentation</p>
+          <p>Seng Kit, Documentation</p>
+        </div>
+      </div>
+
+      <!-- Skills Section -->
+      <section class="container mx-auto px-6 py-12 max-w-5xl text-center">
+        <h3 class="text-xl font-semibold text-gray-900 mb-6">TECH STACK</h3>
+
+        <div class="bg-gray-200 p-6 rounded-2xl w-full max-w-5xl mx-auto">
+          <!-- Skill: HTML -->
+          <div class="mb-4">
+            <div class="flex justify-between items-center">
+              <span class="block text-sm font-semibold text-gray-900"
+                >HTML</span
+              >
+              <span class="text-sm font-semibold text-gray-900">64.1%</span>
+            </div>
+            <div class="h-2 bg-gray-400 rounded-lg mt-1">
+              <div
+                class="h-full bg-gray-900 rounded-lg skill-per html transition-all duration-500 ease-in-out w-0"
+                data-width="64.1%"
+              ></div>
+            </div>
+          </div>
+
+          <!-- Skill: SCSS -->
+          <div class="mb-4">
+            <div class="flex justify-between items-center">
+              <span class="block text-sm font-semibold text-gray-900">CSS</span>
+              <span class="text-sm font-semibold text-gray-900">27.5%</span>
+            </div>
+            <div class="h-2 bg-gray-400 rounded-lg mt-1">
+              <div
+                class="h-full bg-gray-900 rounded-lg skill-per scss transition-all duration-500 ease-in-out w-0"
+                data-width="27.5%"
+              ></div>
+            </div>
+          </div>
+
+          <!-- Skill: Bootstrap -->
+          <div class="mb-4">
+            <div class="flex justify-between items-center">
+              <span class="block text-sm font-semibold text-gray-900"
+                >Bootstrap</span
+              >
+              <span class="text-sm font-semibold text-gray-900">7.4%</span>
+            </div>
+            <div class="h-2 bg-gray-400 rounded-lg mt-1">
+              <div
+                class="h-full bg-gray-900 rounded-lg skill-per bootstrap transition-all duration-500 ease-in-out w-0"
+                data-width="7.4%"
+              ></div>
+            </div>
+          </div>
+
+          <!-- Skill: JavaScript -->
+          <div class="mb-4">
+            <div class="flex justify-between items-center">
+              <span class="block text-sm font-semibold text-gray-900"
+                >JavaScript</span
+              >
+              <span class="text-sm font-semibold text-gray-900">1.1%</span>
+            </div>
+            <div class="h-2 bg-gray-400 rounded-lg mt-1">
+              <div
+                class="h-full bg-gray-900 rounded-lg skill-per bootstrap transition-all duration-500 ease-in-out w-0"
+                data-width="1.1%"
+              ></div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </section>
+    <script src="../../assets/js/navdropdown.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const skillBars = document.querySelectorAll(".skill-per");
+
+        const observer = new IntersectionObserver(
+          (entries, observer) => {
+            entries.forEach((entry) => {
+              if (entry.isIntersecting) {
+                entry.target.style.width = entry.target.dataset.width;
+                observer.unobserve(entry.target); // Stop observing once animated
+              }
+            });
+          },
+          { threshold: 1 } // Triggers when 50% of the element is visible
+        );
+
+        skillBars.forEach((bar) => {
+          observer.observe(bar);
+        });
+      });
+    </script>
+  </body>
+</html>

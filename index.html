@@ -16,9 +16,12 @@
     />
     <meta
       property="og:image"
-      content="https://yourwebsite.com/assets/images/portfolio-preview.jpg"
+      content="https://portfolio-website-zhi-xuns-projects.vercel.app/assets/images/portfolio-preview.jpg"
     />
-    <meta property="og:url" content="https://yourwebsite.com" />
+    <meta
+      property="og:url"
+      content="https://portfolio-website-zhi-xuns-projects.vercel.app"
+    />
     <meta name="robots" content="index, follow" />
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
@@ -211,7 +214,7 @@
       class="relative h-[60vh] flex flex-col justify-center items-center text-center px-6 overflow-hidden transition-opacity duration-500 ease-out"
     >
       <h1
-        class="relative text-6xl md:text-5xl sm:text-2xl font-extrabold bg-gradient-to-l from-[#ffffff] to-[#dcf9ff] bg-clip-text text-transparent"
+        class="relative text-[clamp(2.5rem,5vw,3.75rem)] font-extrabold bg-gradient-to-r from-cyan-200 via-blue-400 to-purple-500 bg-clip-text text-transparent"
       >
         Hi! I'm Zhi Xun
       </h1>
@@ -236,17 +239,60 @@
           />
         </svg>
 
-        <p class="text-gray-200 text-lg font-semibold">Singapore, SG</p>
+        <p
+          class="text-[clamp(1rem, 3.5vw, 1.5rem)] text-gray-200 font-semibold"
+        >
+          Singapore, SG
+        </p>
       </div>
       <p
-        class="relative text-xl md:text-lg sm:text-base text-gray-400 mt-3 font-medium"
+        class="text-[clamp(1rem, 2.5vw, 1.5rem)] text-gray-400 mt-3 font-medium text-center max-w-[50ch] sm:max-w-[50ch] md:max-w-[50ch] lg:max-w-[50ch] leading-relaxed"
       >
-        Currently a second-year student at Singapore Polytechnic,<br />
-        studying Diploma in Information Technology.
+        Currently a second-year student at Singapore Polytechnic, studying
+        Diploma in Information Technology.
       </p>
     </section>
 
     <div class="container mx-auto py-12 px-6 flex flex-col gap-12 items-center">
+      <a
+        href="#"
+        class="group flex flex-col lg:flex-row max-w-5xl items-center bg-white/10 backdrop-blur-[35px] p-6 rounded-[25px] transition-all duration-500 ease-out hover:shadow-[0px_8px_6px_rgba(0,0,0,0.05)] hover:scale-[1.02] hover:bg-white/20 relative"
+      >
+        <!-- Border Effect Layer -->
+        <div
+          class="absolute inset-0 rounded-[25px] pointer-events-none border border-transparent before:absolute before:inset-0 before:rounded-[25px] before:border before:border-white/20 before:shadow-[inset_0_1px_3px_rgba(255,255,255,0.3), inset_0_-1px_3px_rgba(255,255,255,0.15)] before:pointer-events-none before:z-10"
+        ></div>
+
+        <!-- Text Section -->
+        <div class="lg:w-1/2 text-left h-full px-5 relative z-20">
+          <h3 class="text-3xl font-bold mb-4 text-white">Project Title</h3>
+          <p class="text-gray-200 font-medium">
+            A brief description of the project, showcasing its features and
+            functionality.
+          </p>
+          <span
+            class="mt-4 inline-flex items-center text-blue-300 font-semibold text-lg"
+          >
+            Read More
+            <span
+              class="ml-2 transition-transform duration-200 group-hover:translate-x-1"
+              >→</span
+            >
+          </span>
+        </div>
+
+        <!-- Image Section -->
+        <div
+          class="lg:w-2/3 mt-6 lg:mt-0 flex justify-center w-full relative z-20"
+        >
+          <img
+            src="./assets/images/sp70.jpg"
+            alt="Project Thumbnail"
+            class="rounded-lg w-full"
+          />
+        </div>
+      </a>
+
       <a
         href="/projects/sp70"
         class="group flex flex-col lg:flex-row max-w-5xl items-center bg-white/10 backdrop-blur-[35px] p-6 rounded-[25px] transition-all duration-500 ease-out hover:shadow-[0px_8px_6px_rgba(0,0,0,0.05)] hover:scale-[1.02] hover:bg-white/20 relative"
@@ -317,35 +363,36 @@
 
       <a
         href="#"
-        class="group flex flex-col lg:flex-row max-w-5xl items-center bg-gray-200 backdrop-blur-lg p-6 rounded-[1.3rem] transition-all duration-[600ms] ease-out hover:bg-[#fdfff5] hover:shadow-[20px_20px_60px_#bebebe,-20px_-20px_60px_#ffffff] hover:scale-[1.01] block"
+        class="group flex flex-col lg:flex-row max-w-5xl items-center bg-white/10 backdrop-blur-[35px] p-6 rounded-[25px] transition-all duration-500 ease-out hover:shadow-[0px_8px_6px_rgba(0,0,0,0.05)] hover:scale-[1.02] hover:bg-white/20 relative"
       >
-        <!-- Text Section -->
         <div class="lg:w-1/2 text-left h-full px-5">
-          <h3 class="text-3xl font-bold mb-4">Redesigned SP App</h3>
-          <p class="text-gray-600 font-medium">
+          <h3 class="text-3xl font-bold mb-4 text-white">Redesigned SP App</h3>
+          <p class="text-gray-200 font-medium">
             We redesigned the SP app for a cleaner interface, and seamless
             access to essential features. The app prioritizes usability, uniform
             design, and a smarter campus map.
           </p>
           <span
-            class="mt-4 inline-flex items-center text-blue-500 font-semibold text-lg"
+            class="mt-4 inline-flex items-center text-blue-300 font-semibold text-lg"
           >
             Read More
             <span
               class="ml-2 transition-transform duration-200 group-hover:translate-x-1"
-              >→</span
             >
+              →
+            </span>
           </span>
         </div>
-
-        <!-- Image Section -->
-        <div class="lg:w-2/3 mt-6 lg:mt-0 flex justify-center h-full">
+        <div class="lg:w-2/3 mt-6 lg:mt-0 flex justify-center w-full">
           <img
             src="./assets/images/sp70.jpg"
-            alt="Education"
+            alt="Project Thumbnail"
             class="rounded-lg w-full"
           />
         </div>
+        <div
+          class="absolute inset-0 rounded-[25px] shadow-[inset_0_-1px_1px_rgba(255,255,255,0.1), inset_0_1px_1px_rgba(255,255,255,0.25)]"
+        ></div>
       </a>
     </div>
 
@@ -405,6 +452,10 @@
     </footer>
 
     <!-- JavaScript for Menu -->
+    <script type="module">
+      import { inject } from "https://esm.sh/@vercel/analytics";
+      inject();
+    </script>
     <script>
       document.addEventListener("DOMContentLoaded", function () {
         // Step 1: Fade in the body first
