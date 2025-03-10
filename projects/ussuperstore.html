@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Project Case Study - Portfolio</title>
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css"
+      rel="stylesheet"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-javascript.min.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&display=swap");
+
+      body {
+        font-family: "Geist";
+      }
+
+      pre[class*="language-"] {
+        background: #1a1a1a !important;
+        padding: 1.5rem !important;
+        margin: 0 !important;
+        border-radius: 0.5rem;
+      }
+
+      code[class*="language-"] {
+        text-shadow: none !important;
+        font-family: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
+          "Courier New", monospace !important;
+        font-size: 0.875rem !important;
+      }
+
+      .token.comment {
+        color: #636363 !important;
+      }
+
+      .token.function {
+        color: #61afef !important;
+      }
+
+      .token.keyword {
+        color: #c678dd !important;
+      }
+
+      .token.string {
+        color: #98c379 !important;
+      }
+
+      .token.class-name {
+        color: #e5c07b !important;
+      }
+      .hero-image {
+        height: 60vh;
+        max-height: 800px;
+        min-height: 400px;
+      }
+
+      @media (min-width: 1280px) {
+        .hero-image {
+          height: 70vh;
+        }
+      }
+
+      /* Add styles for code sections */
+      .code-block {
+        max-height: 500px;
+        overflow-y: auto;
+      }
+      @import url("https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&display=swap");
+
+      :root {
+        --primary-gradient: linear-gradient(
+          to bottom,
+          rgba(9, 9, 11, 0.7),
+          rgba(9, 9, 11, 0.9)
+        );
+      }
+
+      body {
+        font-family: "Geist", sans-serif;
+      }
+
+      .screenshot-container {
+        width: 100%;
+        aspect-ratio: 16/10; /* MacBook Pro aspect ratio */
+        border-radius: 1rem;
+        overflow: hidden;
+        position: relative;
+        background: #1a1a1a;
+        margin: 4rem 0;
+      }
+
+      .screenshot-container img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      code[class*="language-"] {
+        font-family: "SF Mono", SFMono-Regular, ui-monospace, Menlo, Monaco,
+          "Cascadia Mono", "Segoe UI Mono", "Roboto Mono", monospace !important;
+        font-size: 0.875rem !important;
+        line-height: 1.7 !important;
+      }
+
+      .section-divider {
+        height: 1px;
+        background: linear-gradient(
+          to right,
+          transparent,
+          #374151,
+          transparent
+        );
+        margin: 8rem 0;
+      }
+
+      .feature-section {
+        padding: 8rem 0;
+      }
+
+      .code-explanation {
+        background: rgba(255, 255, 255, 0.03);
+        border: 1px solid rgba(255, 255, 255, 0.05);
+        border-radius: 0.75rem;
+        padding: 1.5rem;
+        margin: 1.5rem 0;
+      }
+    </style>
+  </head>
+  <body class="bg-[#09090b] text-gray-900 antialiased">
+    <!-- Hero Section -->
+    <section class="relative h-[70vh] overflow-hidden">
+      <!-- Background Image -->
+      <img
+        src="../assets/images/sp70.jpg"
+        alt="US Superstore Analytics Dashboard"
+        class="absolute inset-0 w-full h-full object-cover object-center"
+      />
+      <!-- Gradient Overlay -->
+      <div
+        class="absolute inset-0 bg-gradient-to-b from-black/60 to-black/20"
+      ></div>
+
+      <!-- Content -->
+      <div
+        class="relative container mx-auto px-6 h-full flex flex-col justify-end pb-20"
+      >
+        <div class="max-w-3xl">
+          <span
+            class="inline-block px-4 py-2 rounded-full bg-white/10 backdrop-blur-sm text-white text-sm font-medium mb-4"
+          >
+            Full Stack Development
+          </span>
+          <h1 class="text-4xl md:text-6xl font-bold text-white mb-4">
+            US Superstore Data Platform
+          </h1>
+          <p class="text-lg text-gray-200 max-w-2xl">
+            A comprehensive data visualization platform built with Web
+            Components and Express.js, featuring real-time data processing of
+            over 10,000 sales records with interactive customer data cards using
+            web components.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Project Overview -->
+    <section class="py-20">
+      <div class="container mx-auto px-6">
+        <div class="grid grid-cols-1 md:grid-cols-[2fr_1fr] gap-12">
+          <!-- Main Content -->
+          <div class="space-y-12">
+            <!-- ... existing overview section ... -->
+
+            <!-- Technical Implementation -->
+            <div class="space-y-8">
+              <!-- Web Components Implementation -->
+              <div
+                class="rounded-lg border border-neutral-800 bg-neutral-900/50 p-6"
+              >
+                <h4 class="text-lg font-medium text-white mb-4">
+                  Custom Web Components
+                </h4>
+                <p class="text-neutral-300 mb-4">
+                  Implemented reusable data cards using Web Components API for
+                  displaying customer information:
+                </p>
+                <pre
+                  class="language-javascript rounded-lg code-block"
+                ><code>class DataCard extends HTMLElement {
+    constructor() {
+      super();
+      this.root = this.attachShadow({ mode: "closed" });
+      let clone = template.content.cloneNode(true);
+      this.root.append(clone);
+      
+      // Overlay logic implementation
+      const overlay = this.root.querySelector("#overlay");
+      const moreInfoBtn = this.root.querySelector("#moreInfoBtn");
+      
+      moreInfoBtn.addEventListener("click", () => {
+        this.updateOverlayContent();
+        overlay.classList.remove("d-none");
+      });
+    }
+  
+    static get observedAttributes() {
+      return [
+        "customername",
+        "salesfigure",
+        "quantityfigure",
+        "profitfigure"
+      ];
+    }
+  }</code></pre>
+              </div>
+
+              <!-- Server Implementation -->
+              <div
+                class="rounded-lg border border-neutral-800 bg-neutral-900/50 p-6"
+              >
+                <h4 class="text-lg font-medium text-white mb-4">
+                  Express.js Server
+                </h4>
+                <p class="text-neutral-300 mb-4">
+                  Built a RESTful API server using Express.js to handle data
+                  requests and CSV parsing:
+                </p>
+                <pre
+                  class="language-javascript rounded-lg code-block"
+                ><code>const express = require('express');
+  const fs = require('fs');
+  const app = express();
+  const parse = require("csv-parse").parse;
+  
+  async function readAllUSSuperStore() {
+     return new Promise((resolve, reject) => {
+        const rData = [];
+        fs.createReadStream("./data/US_Superstore.csv")
+           .pipe(parse({ delimiter: ',', from_line: 2 }))
+           .on('data', function (csvrow) {
+              let newRecord = {
+                 customerName: csvrow[6],
+                 sales: parseFloat(csvrow[17]),
+                 quantity: parseInt(csvrow[18]),
+                 profit: parseFloat(csvrow[20])
+              };
+              rData.push(newRecord);
+           })
+           .on('end', () => resolve(rData))
+           .on('error', (err) => reject(err));
+     });
+  }</code></pre>
+              </div>
+
+              <!-- Data Fetching -->
+              <div
+                class="rounded-lg border border-neutral-800 bg-neutral-900/50 p-6"
+              >
+                <h4 class="text-lg font-medium text-white mb-4">
+                  Data Fetching
+                </h4>
+                <p class="text-neutral-300 mb-4">
+                  Implemented async data fetching and display logic:
+                </p>
+                <pre
+                  class="language-javascript rounded-lg code-block"
+                ><code>async function displayFirst10() {
+    try {
+      const response = await fetch("http://localhost:8081/allussuperstore");
+      const data = await response.json();
+      
+      const dataCardDiv = document.querySelector("#datacards");
+      dataCardDiv.innerHTML = "";
+  
+      data.slice(0, 10).forEach((record) => {
+        const newDataCard = document.createElement("data-card");
+        newDataCard.setAttribute("customername", record.customerName);
+        newDataCard.setAttribute("salesfigure", record.sales.toFixed(2));
+        dataCardDiv.append(newDataCard);
+      });
+    } catch (error) {
+      console.error("Error fetching data:", error);
+    }
+  }</code></pre>
+              </div>
+            </div>
+          </div>
+
+          <!-- Sidebar -->
+          <div class="space-y-8 md:pl-10 md:border-l md:border-neutral-800">
+            <!-- Project Details Card -->
+            <div
+              class="rounded-lg border border-neutral-800 bg-transparent p-6"
+            >
+              <h3 class="text-lg font-semibold text-white mb-4">
+                Project Details
+              </h3>
+              <dl class="space-y-4">
+                <div>
+                  <dt class="text-sm text-neutral-400">Architecture</dt>
+                  <dd class="text-white">Client-Server</dd>
+                </div>
+                <div>
+                  <dt class="text-sm text-neutral-400">Data Source</dt>
+                  <dd class="text-white">CSV Processing</dd>
+                </div>
+                <div>
+                  <dt class="text-sm text-neutral-400">API Endpoints</dt>
+                  <dd class="text-white">7 RESTful Routes</dd>
+                </div>
+                <div>
+                  <dt class="text-sm text-neutral-400">Records Processed</dt>
+                  <dd class="text-white">10,000+</dd>
+                </div>
+              </dl>
+            </div>
+
+            <!-- Technologies Used -->
+            <div
+              class="rounded-lg border border-neutral-800 bg-transparent p-6"
+            >
+              <h3 class="text-lg font-semibold text-white mb-4">
+                Technologies
+              </h3>
+              <div class="flex flex-wrap gap-2">
+                <span
+                  class="px-3 py-1 rounded-full bg-neutral-800 text-neutral-300 text-sm"
+                  >Web Components</span
+                >
+                <span
+                  class="px-3 py-1 rounded-full bg-neutral-800 text-neutral-300 text-sm"
+                  >Express.js</span
+                >
+                <span
+                  class="px-3 py-1 rounded-full bg-neutral-800 text-neutral-300 text-sm"
+                  >Node.js</span
+                >
+                <span
+                  class="px-3 py-1 rounded-full bg-neutral-800 text-neutral-300 text-sm"
+                  >CSV Parse</span
+                >
+                <span
+                  class="px-3 py-1 rounded-full bg-neutral-800 text-neutral-300 text-sm"
+                  >REST API</span
+                >
+                <span
+                  class="px-3 py-1 rounded-full bg-neutral-800 text-neutral-300 text-sm"
+                  >Bootstrap</span
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Results Section -->
+    <section class="py-20 bg-neutral-900/50">
+      <div class="container mx-auto px-6">
+        <h2 class="text-3xl font-bold text-white mb-12">Technical Features</h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div
+            class="rounded-lg border border-neutral-800 bg-neutral-900/50 p-6"
+          >
+            <div
+              class="w-12 h-12 rounded-full bg-blue-500/10 flex items-center justify-center mb-4"
+            >
+              <svg
+                class="w-6 h-6 text-blue-400"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"
+                />
+              </svg>
+            </div>
+            <h3 class="text-xl font-bold text-white mb-2">Web Components</h3>
+            <p class="text-neutral-400">
+              Custom elements with Shadow DOM for encapsulated styling and
+              behavior
+            </p>
+            <ul class="mt-4 space-y-2 text-sm text-neutral-400">
+              <li class="flex items-center">
+                <span class="w-1.5 h-1.5 rounded-full bg-blue-400 mr-2"></span>
+                Reusable data cards
+              </li>
+              <li class="flex items-center">
+                <span class="w-1.5 h-1.5 rounded-full bg-blue-400 mr-2"></span>
+                Isolated styling
+              </li>
+              <li class="flex items-center">
+                <span class="w-1.5 h-1.5 rounded-full bg-blue-400 mr-2"></span>
+                Event handling
+              </li>
+            </ul>
+          </div>
+          <!-- Add similar blocks for Data Processing and API Features -->
+        </div>
+      </div>
+    </section>
+
+    <section class="py-20">
+      <div class="container mx-auto px-6">
+        <div class="flex justify-center">
+          <div class="space-y-12">
+            <div class="space-y-8">
+              <div
+                class="rounded-lg border border-neutral-800 bg-neutral-900/50 p-6"
+              >
+                <h4 class="text-lg font-medium text-white mb-4">
+                  Data Cards
+                </h4>
+                <p class="text-neutral-300 mb-4">
+                    Custom web components for displaying customer data cards with
+                    interactive overlay:
+                </p>
+                <img src="../assets/images/data-card-example.jpg" alt="data card example" class="w-full rounded-2xl">
+              </div>
+
+              <!-- Server Implementation -->
+              <div
+                class="rounded-lg border border-neutral-800 bg-neutral-900/50 p-6"
+              >
+                <h4 class="text-lg font-medium text-white mb-4">
+                  Express.js Server
+                </h4>
+                <p class="text-neutral-300 mb-4">
+                  Built a RESTful API server using Express.js to handle data
+                  requests and CSV parsing:
+                </p>
+                <pre
+                  class="language-javascript rounded-lg code-block"
+                ><code>const express = require('express');
+ const fs = require('fs');
+ const app = express();
+ const parse = require("csv-parse").parse;
+ 
+ async function readAllUSSuperStore() {
+    return new Promise((resolve, reject) => {
+       const rData = [];
+       fs.createReadStream("./data/US_Superstore.csv")
+          .pipe(parse({ delimiter: ',', from_line: 2 }))
+          .on('data', function (csvrow) {
+             let newRecord = {
+                customerName: csvrow[6],
+                sales: parseFloat(csvrow[17]),
+                quantity: parseInt(csvrow[18]),
+                profit: parseFloat(csvrow[20])
+             };
+             rData.push(newRecord);
+          })
+          .on('end', () => resolve(rData))
+          .on('error', (err) => reject(err));
+    });
+ }</code></pre>
+              </div>
+
+              <!-- Data Fetching -->
+              <div
+                class="rounded-lg border border-neutral-800 bg-neutral-900/50 p-6"
+              >
+                <h4 class="text-lg font-medium text-white mb-4">
+                  Data Fetching
+                </h4>
+                <p class="text-neutral-300 mb-4">
+                  Implemented async data fetching and display logic:
+                </p>
+                <pre
+                  class="language-javascript rounded-lg code-block"
+                ><code>async function displayFirst10() {
+   try {
+     const response = await fetch("http://localhost:8081/allussuperstore");
+     const data = await response.json();
+     
+     const dataCardDiv = document.querySelector("#datacards");
+     dataCardDiv.innerHTML = "";
+ 
+     data.slice(0, 10).forEach((record) => {
+       const newDataCard = document.createElement("data-card");
+       newDataCard.setAttribute("customername", record.customerName);
+       newDataCard.setAttribute("salesfigure", record.sales.toFixed(2));
+       dataCardDiv.append(newDataCard);
+     });
+   } catch (error) {
+     console.error("Error fetching data:", error);
+   }
+ }</code></pre>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script>
+      // Add smooth scrolling for anchor links
+      document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+        anchor.addEventListener("click", function (e) {
+          e.preventDefault();
+          document.querySelector(this.getAttribute("href")).scrollIntoView({
+            behavior: "smooth",
+          });
+        });
+      });
+
+      // Add intersection observer for fade-in animations
+      const observerOptions = {
+        threshold: 0.1,
+      };
+
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("opacity-100");
+            entry.target.classList.remove("opacity-0", "translate-y-8");
+          }
+        });
+      }, observerOptions);
+
+      document.querySelectorAll("section > div").forEach((el) => {
+        el.classList.add(
+          "transition-all",
+          "duration-700",
+          "opacity-0",
+          "translate-y-8"
+        );
+        observer.observe(el);
+      });
+    </script>
+  </body>
+</html>
