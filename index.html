@@ -25,10 +25,34 @@
     <meta name="robots" content="index, follow" />
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/webicon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="./assets/images/webicon.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="./assets/images/webicon.png"
+    />
+    <link rel="shortcut icon" href="./assets/images/webicon.png" />
     <link rel="stylesheet" href="./assets/css/navmenu.css" />
     <style>
       @import url("https://fonts.googleapis.com/css2?family=Geist:wght@100..900&display=swap");
       @import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
 
       body {
         font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
@@ -54,16 +78,63 @@
         visibility: visible;
         transition-delay: 0s;
       }
+      .no-scroll {
+        overflow: hidden;
+        height: 100vh;
+      }
     </style>
     <script
       src="https://kit.fontawesome.com/be3d7a8849.js"
       crossorigin="anonymous"
     ></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
   </head>
 
   <body
-    class="bg-gradient-to-b from-[#09203F] to-[#537895] bg-fixed min-h-screen opacity-0 transition-opacity duration-700 ease-out"
+    class="bg-gradient-to-b from-[#09203F] to-[#537895] bg-fixed min-h-screen opacity-0 transition-opacity duration-700 ease-out no-scroll"
   >
+    <div
+      class="fixed inset-0 bg-black/60 backdrop-blur-sm z-[9999] flex items-center justify-center overflow-hidden"
+    >
+      <div
+        class="max-w-md p-10 bg-white/20 border border-white/20 backdrop-blur-md rounded-2xl shadow-lg"
+      >
+        <h2 class="text-2xl font-bold text-white mb-4 text-center">
+          Under Construction
+        </h2>
+        <p class="text-neutral-400 ml-2 mr-2 font-medium mb-4">
+          This website is currently being redesigned and rebuilt with Next.js.
+          Please check back soon for the updated version! Contact me below for
+          enquiries.
+        </p>
+        <div class="flex w-full justify-between mt-6">
+          <a
+            href="https://github.com/zhixunnnnn"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="flex-1 mx-2 p-3 bg-white/10 rounded-lg hover:bg-white/20 border border-white/20 transition-colors duration-300 flex justify-center items-center"
+          >
+            <i data-lucide="github" class="text-white w-6 h-6"></i>
+          </a>
+          <a
+            href="https://www.linkedin.com/in/zhixunnn/"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="flex-1 mx-2 p-3 bg-white/10 rounded-lg hover:bg-white/20 border border-white/20 transition-colors duration-300 flex justify-center items-center"
+          >
+            <i data-lucide="linkedin" class="text-white w-6 h-6"></i>
+          </a>
+          <a
+            href="https://instagram.com/zhixunnnn/"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="flex-1 mx-2 p-3 bg-white/10 rounded-lg hover:bg-white/20 border border-white/20 transition-colors duration-300 flex justify-center items-center"
+          >
+            <i data-lucide="instagram" class="text-white w-6 h-6"></i>
+          </a>
+        </div>
+      </div>
+    </div>
     <svg width="0" height="0" class="absolute">
       <defs>
         <linearGradient id="gradientId" x1="0%" y1="0%" x2="0%" y2="100%">
@@ -246,7 +317,7 @@
         </p>
       </div>
       <p
-        class="text-[clamp(1rem, 2.5vw, 1.5rem)] text-gray-400 mt-3 font-medium text-center max-w-[50ch] sm:max-w-[50ch] md:max-w-[50ch] lg:max-w-[50ch] leading-relaxed"
+        class="text-[clamp(1rem, 2.5vw, 1.5rem)] text-gray-400 mt-3 font-medium text-center max-w-[45ch] leading-relaxed"
       >
         A passionate full-stack developer currently a second-year student at
         Singapore Polytechnic, studying Diploma in Information Technology.
@@ -297,8 +368,8 @@
           class="absolute inset-0 rounded-[25px] pointer-events-none border border-transparent before:absolute before:inset-0 before:rounded-[25px] before:border before:border-white/20 before:shadow-[inset_0_1px_3px_rgba(255,255,255,0.3), inset_0_-1px_3px_rgba(255,255,255,0.15)] before:pointer-events-none before:z-10"
         ></div>
         <div class="lg:w-1/2 text-left h-full px-5 relative z-20">
-          <h3 class="text-3xl font-bold mb-4 text-white">SP70 Website</h3>
-          <p class="text-gray-200 font-medium">
+          <h3 class="text-4xl font-bold mb-4 text-white">SP70 Website</h3>
+          <p class="text-gray-200 font-medium text-lg">
             A front-end website, developed for Semester 1. Its responsive and
             user-friendly, aimed to celebrate 70 years of Singapore Polytechnic
             through an interactive layout.
@@ -314,10 +385,10 @@
           </span>
         </div>
         <div
-          class="lg:w-2/3 mt-6 lg:mt-0 flex justify-center w-[480px] h-[360px] relative z-20"
+          class="lg:w-2/3 mt-6 lg:mt-0 flex justify-center max-w-[480px] h-[400px] relative z-20"
         >
           <img
-            src="./assets/images/sp70.jpg"
+            src="./assets/images/sp70-thumbnail.png"
             alt="Project Thumbnail"
             class="rounded-xl w-full object-cover"
           />
@@ -326,14 +397,17 @@
 
       <a
         href="/projects/turbotracks"
-        class="group flex flex-col overflow-hidden lg:flex-row max-w-5xl h-[440px] lg:h-[440px] md:h-[400px] sm:h-[360px] items-center bg-white/10 backdrop-blur-[35px] p-6 rounded-[25px] transition-all duration-300 ease-out hover:shadow-[0px_8px_6px_rgba(0,0,0,0.05)] hover:scale-[1.02] hover:bg-white/20 relative"
+        class="group flex flex-col lg:flex-row max-w-5xl items-center bg-white/10 backdrop-blur-[35px] p-6 rounded-[25px] transition-all duration-300 ease-out hover:shadow-[0px_8px_6px_rgba(0,0,0,0.05)] hover:scale-[1.02] hover:bg-white/20 relative"
       >
         <div
           class="absolute inset-0 rounded-[25px] pointer-events-none border border-transparent before:absolute before:inset-0 before:rounded-[25px] before:border before:border-white/20 before:shadow-[inset_0_1px_3px_rgba(255,255,255,0.3), inset_0_-1px_3px_rgba(255,255,255,0.15)] before:pointer-events-none before:z-10"
         ></div>
         <div class="lg:w-1/2 text-left h-full px-5 relative z-20">
-          <h3 class="text-3xl font-bold mb-4 text-white">Turbo Tracks</h3>
-          <p class="text-gray-200 font-medium">
+          <h3 class="text-4xl font-bold mb-4 text-white">Turbo Tracks</h3>
+          <p class="text-gray-200 font-medium text-lg mb-4">
+            <span class="uppercase">Full Stack</span> • 2024
+          </p>
+          <p class="text-gray-200 font-medium text-lg">
             A web-based gamified fitness challenge platform built with JWT,
             Node.js, MySQL and Express among others. Users can participate in
             challenges, earn points and buy cars to race.
@@ -349,12 +423,12 @@
           </span>
         </div>
         <div
-          class="lg:w-2/3 mt-6 lg:mt-0 flex justify-center w-full relative z-20"
+          class="lg:w-2/3 mt-6 lg:mt-0 flex justify-center max-w-[480px] h-[400px] relative z-20"
         >
           <img
-            src="./assets/images/sp70.jpg"
+            src="https://placehold.co/480x400"
             alt="Project Thumbnail"
-            class="rounded-lg w-full p-2"
+            class="rounded-lg h-full object-cover"
           />
         </div>
       </a>
@@ -387,7 +461,7 @@
           class="lg:w-2/3 mt-6 lg:mt-0 flex justify-center w-[400px] h-[440px] relative z-20"
         >
           <img
-            src="./assets/images/Frame 1.png"
+            src="./assets/images/spapp-thumbnail.png"
             alt="Project Thumbnail"
             class="rounded-lg h-full object-cover"
           />
@@ -511,6 +585,9 @@
           lastScrollTop = scrollTop <= 0 ? 0 : scrollTop; // Prevent negative values
         });
       });
+    </script>
+    <script>
+      lucide.createIcons();
     </script>
   </body>
 </html>
