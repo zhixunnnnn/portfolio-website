@@ -24,8 +24,6 @@
   color: #ffffff;
 }
 
-@import url('/fonts/inter.css');
-
 :root {
   --radius: 0.625rem;
 
@@ -168,7 +166,6 @@ nav {
 } */
 
 /* Adaptive fade gradients for top and bottom of pages */
-@import url("/fonts/inter.css");
 
 .fade-gradient-top {
   background: linear-gradient(
