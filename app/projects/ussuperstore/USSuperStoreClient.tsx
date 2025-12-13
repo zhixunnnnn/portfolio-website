@@ -67,7 +67,7 @@ export default function USSuperStoreClient() {
       />
 
       {/* Hero Section */}
-      <section className="relative pt-24 md:pt-24 pb-14 px-6 fade-up">
+      <section className="relative pt-24 md:pt-32 pb-14 px-6 fade-up">
         <div className="container mx-auto max-w-4xl">
           <Link
             href="/projects"
