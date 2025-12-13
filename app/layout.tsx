@@ -2,6 +2,7 @@ import type { Metadata, Viewport } from "next";
 import "./globals.css";
 import Navbar from "@/components/shared/Navbar";
 import Footer from "@/components/shared/Footer";
+import SpotlightSearch from "@/components/SpotlightSearch";
 import { Analytics } from "@vercel/analytics/next";
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://zhixun.dev";
@@ -141,6 +142,7 @@ export default function RootLayout({
       </head>
       <body className="bg-background text-foreground">
         <Navbar />
+        <SpotlightSearch />
         {children}
         <Footer />
         <Analytics />

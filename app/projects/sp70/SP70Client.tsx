@@ -67,7 +67,7 @@ export default function SP70Client() {
       />
 
       {/* Hero Section */}
-      <section className="relative pt-24 md:pt-32 pb-14 px-6 fade-up">
+      <section className="relative pt-24 md:pt-32 pb-14 px-6">
         <div className="container mx-auto max-w-4xl">
           <Link
             href="/projects"
@@ -77,49 +77,52 @@ export default function SP70Client() {
             Back to Projects
           </Link>
 
-          {/* Title */}
-          <div className="mt-8">
-            <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between sm:gap-6">
-              <div className="flex-1">
-                <h1 className="text-[40px] sm:text-5xl font-bold text-slate-900 leading-[1.15] sm:leading-[1.1]">
-                  SP70 Website
-                </h1>
-                <div className="mt-2 flex flex-wrap items-center gap-2">
-                  <span className="inline-flex items-center rounded-lg bg-stone-100 text-stone-700 text-xs font-semibold px-2.5 py-1 border border-stone-200">
-                    Singapore Polytechnic
-                  </span>
-                  <span className="inline-flex items-center rounded-lg bg-stone-100 text-stone-700 text-xs font-semibold px-2.5 py-1 border border-stone-200">
-                    70th Anniversary · 2024
-                  </span>
+          {/* Content that fades up */}
+          <div className="fade-up">
+            {/* Title */}
+            <div className="mt-8">
+              <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between sm:gap-6">
+                <div className="flex-1">
+                  <h1 className="text-[40px] sm:text-5xl font-bold text-slate-900 leading-[1.15] sm:leading-[1.1]">
+                    SP70 Website
+                  </h1>
+                  <div className="mt-2 flex flex-wrap items-center gap-2">
+                    <span className="inline-flex items-center rounded-lg bg-stone-100 text-stone-700 text-xs font-semibold px-2.5 py-1 border border-stone-200">
+                      Singapore Polytechnic
+                    </span>
+                    <span className="inline-flex items-center rounded-lg bg-stone-100 text-stone-700 text-xs font-semibold px-2.5 py-1 border border-stone-200">
+                      70th Anniversary · 2024
+                    </span>
+                  </div>
+                </div>
+
+                {/* CTA Button */}
+                <div className="mt-4 sm:mt-0 sm:flex-shrink-0 w-full sm:w-auto">
+                  <Link
+                    href="https://sp70.sp.edu.sg"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="View the live SP70 website"
+                    className="inline-flex items-center justify-center w-full sm:w-auto gap-2 rounded-xl bg-[#E4002B] text-white text-[15px] font-medium px-2.5 py-1.5 shadow-sm hover:bg-[#c9001f] hover:shadow-md transition-all duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-slate-900 focus-visible:ring-offset-2"
+                  >
+                    View Live Site
+                    <ExternalLink className="w-4 h-4" strokeWidth={2.5} />
+                  </Link>
                 </div>
               </div>
 
-              {/* CTA Button */}
-              <div className="mt-4 sm:mt-0 sm:flex-shrink-0 w-full sm:w-auto">
-                <Link
-                  href="https://sp70.sp.edu.sg"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label="View the live SP70 website"
-                  className="inline-flex items-center justify-center w-full sm:w-auto gap-2 rounded-xl bg-[#E4002B] text-white text-[15px] font-medium px-2.5 py-1.5 shadow-sm hover:bg-[#c9001f] hover:shadow-md transition-all duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-slate-900 focus-visible:ring-offset-2"
-                >
-                  View Live Site
-                  <ExternalLink className="w-4 h-4" strokeWidth={2.5} />
-                </Link>
-              </div>
+              {/* Accent line */}
+              <div className="mt-5 sm:mt-6 h-[2px] sm:h-[3px] w-12 sm:w-16 md:w-24 bg-[#E4002B] rounded-full" />
             </div>
 
-            {/* Accent line */}
-            <div className="mt-5 sm:mt-6 h-[2px] sm:h-[3px] w-12 sm:w-16 md:w-24 bg-[#E4002B] rounded-full" />
+            {/* Description */}
+            <p className="mt-5 sm:mt-6 max-w-3xl text-[15px] md:text-[16px] leading-7 sm:leading-relaxed text-slate-700 font-medium">
+              Official website for Singapore Polytechnic&apos;s 70th anniversary
+              celebration. The site showcases the institution&apos;s rich
+              history, milestone achievements, and upcoming events commemorating
+              seven decades of excellence in polytechnic education.
+            </p>
           </div>
-
-          {/* Description */}
-          <p className="mt-5 sm:mt-6 max-w-3xl text-[15px] md:text-[16px] leading-7 sm:leading-relaxed text-slate-700 font-medium">
-            Official website for Singapore Polytechnic&apos;s 70th anniversary
-            celebration. The site showcases the institution&apos;s rich history,
-            milestone achievements, and upcoming events commemorating seven
-            decades of excellence in polytechnic education.
-          </p>
         </div>
       </section>
 

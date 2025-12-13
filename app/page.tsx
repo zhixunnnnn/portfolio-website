@@ -14,11 +14,17 @@ interface Project {
 }
 
 const EMAIL = "zhixunnnn@icloud.com";
-const LINKEDIN = "https://linkedin.com/in/yourhandle";
+const LINKEDIN = "https://www.linkedin.com/in/zhixunnn/";
 
 export default function Home() {
   const projects: Project[] = (projectsData as Project[]).slice(0, 3);
   const [bottomGradientOpacity, setBottomGradientOpacity] = useState(1);
+  const [isMac, setIsMac] = useState(true);
+
+  // Detect OS for keyboard shortcut display
+  useEffect(() => {
+    setIsMac(navigator.platform.toUpperCase().indexOf("MAC") >= 0);
+  }, []);
 
   // Handle scroll to fade bottom gradient
   useEffect(() => {
@@ -168,7 +174,7 @@ export default function Home() {
               </div>
             ))}
           </div>
-          <div className="mt-8 fade-up">
+          <div className="mt-8 fade-up flex items-center gap-4">
             <Link
               href="/projects"
               className="inline-flex items-center gap-1.5 text-sm text-slate-700 hover:text-slate-900 font-medium transition-colors group"
@@ -176,6 +182,13 @@ export default function Home() {
               <span>See All Projects</span>
               <ArrowUpRight className="w-3.5 h-3.5 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
             </Link>
+            <span className="hidden sm:flex items-center gap-1.5 text-xs text-stone-400">
+              <span>or press</span>
+              <kbd className="inline-flex items-center gap-0.5 px-1.5 py-0.5 text-[10px] font-medium text-stone-500 bg-stone-100 rounded border border-stone-200">
+                {isMac ? "⌘" : "Ctrl+"}K
+              </kbd>
+              <span>to search</span>
+            </span>
           </div>
         </div>
       </section>

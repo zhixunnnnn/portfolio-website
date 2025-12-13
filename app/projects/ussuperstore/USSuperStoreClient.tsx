@@ -67,7 +67,7 @@ export default function USSuperStoreClient() {
       />
 
       {/* Hero Section */}
-      <section className="relative pt-24 md:pt-32 pb-14 px-6 fade-up">
+      <section className="relative pt-24 md:pt-32 pb-14 px-6">
         <div className="container mx-auto max-w-4xl">
           <Link
             href="/projects"
@@ -77,49 +77,52 @@ export default function USSuperStoreClient() {
             Back to Projects
           </Link>
 
-          {/* Title */}
-          <div className="mt-8">
-            <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between sm:gap-6">
-              <div className="flex-1">
-                <h1 className="text-[40px] sm:text-5xl font-bold text-slate-900 leading-[1.15] sm:leading-[1.1]">
-                  US Superstore Analysis
-                </h1>
-                <div className="mt-2 flex flex-wrap items-center gap-2">
-                  <span className="inline-flex items-center rounded-lg bg-stone-100 text-stone-700 text-xs font-semibold px-2.5 py-1 border border-stone-200">
-                    Data Analysis
-                  </span>
-                  <span className="inline-flex items-center rounded-lg bg-stone-100 text-stone-700 text-xs font-semibold px-2.5 py-1 border border-stone-200">
-                    Academic Project · 2024
-                  </span>
+          {/* Content that fades up */}
+          <div className="fade-up">
+            {/* Title */}
+            <div className="mt-8">
+              <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between sm:gap-6">
+                <div className="flex-1">
+                  <h1 className="text-[40px] sm:text-5xl font-bold text-slate-900 leading-[1.15] sm:leading-[1.1]">
+                    US Superstore Analysis
+                  </h1>
+                  <div className="mt-2 flex flex-wrap items-center gap-2">
+                    <span className="inline-flex items-center rounded-lg bg-stone-100 text-stone-700 text-xs font-semibold px-2.5 py-1 border border-stone-200">
+                      Data Analysis
+                    </span>
+                    <span className="inline-flex items-center rounded-lg bg-stone-100 text-stone-700 text-xs font-semibold px-2.5 py-1 border border-stone-200">
+                      Academic Project · 2024
+                    </span>
+                  </div>
+                </div>
+
+                {/* CTA Button */}
+                <div className="mt-4 sm:mt-0 sm:flex-shrink-0 w-full sm:w-auto">
+                  <Link
+                    href="#"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="View source code on GitHub"
+                    className="inline-flex items-center justify-center w-full sm:w-auto gap-2 rounded-xl bg-slate-800 text-white text-[15px] font-medium px-2.5 py-1.5 shadow-sm hover:bg-slate-700 hover:shadow-md transition-all duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-slate-900 focus-visible:ring-offset-2"
+                  >
+                    <Github className="w-4 h-4" strokeWidth={2.5} />
+                    Source Code
+                  </Link>
                 </div>
               </div>
 
-              {/* CTA Button */}
-              <div className="mt-4 sm:mt-0 sm:flex-shrink-0 w-full sm:w-auto">
-                <Link
-                  href="#"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label="View source code on GitHub"
-                  className="inline-flex items-center justify-center w-full sm:w-auto gap-2 rounded-xl bg-slate-800 text-white text-[15px] font-medium px-2.5 py-1.5 shadow-sm hover:bg-slate-700 hover:shadow-md transition-all duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-slate-900 focus-visible:ring-offset-2"
-                >
-                  <Github className="w-4 h-4" strokeWidth={2.5} />
-                  Source Code
-                </Link>
-              </div>
+              {/* Accent line */}
+              <div className="mt-5 sm:mt-6 h-[2px] sm:h-[3px] w-12 sm:w-16 md:w-24 bg-emerald-600 rounded-full" />
             </div>
 
-            {/* Accent line */}
-            <div className="mt-5 sm:mt-6 h-[2px] sm:h-[3px] w-12 sm:w-16 md:w-24 bg-emerald-600 rounded-full" />
+            {/* Description */}
+            <p className="mt-5 sm:mt-6 max-w-3xl text-[15px] md:text-[16px] leading-7 sm:leading-relaxed text-slate-700 font-medium">
+              A comprehensive data analysis project exploring the US Superstore
+              dataset. The project provides insights into sales patterns,
+              customer segments, product performance, and regional trends using
+              Python, pandas, and data visualization libraries.
+            </p>
           </div>
-
-          {/* Description */}
-          <p className="mt-5 sm:mt-6 max-w-3xl text-[15px] md:text-[16px] leading-7 sm:leading-relaxed text-slate-700 font-medium">
-            A comprehensive data analysis project exploring the US Superstore
-            dataset. The project provides insights into sales patterns, customer
-            segments, product performance, and regional trends using Python,
-            pandas, and data visualization libraries.
-          </p>
         </div>
       </section>
 
