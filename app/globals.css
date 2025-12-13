@@ -24,6 +24,8 @@
   color: #ffffff;
 }
 
+@import url('/fonts/inter.css');
+
 :root {
   --radius: 0.625rem;
 
