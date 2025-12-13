@@ -4,13 +4,12 @@ import { Menu, X } from "lucide-react";
 import { useState, useEffect, useRef } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { House, Book, FolderGit, User } from "lucide-react";
+import { House, FolderGit, User } from "lucide-react";
 
 const navItems = [
   { href: "/", icon: House, label: "Home" },
   { href: "/projects", icon: FolderGit, label: "Projects" },
-  { href: "/education", icon: Book, label: "Education" },
-  { href: "mailto:zhixunnnn@icloud.com", icon: User, label: "About Me" },
+  { href: "/about", icon: User, label: "About" },
 ];
 
 export default function Navbar() {
