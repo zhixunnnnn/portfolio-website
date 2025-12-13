@@ -1,0 +1,50 @@
+[
+  {
+    "id": "fintech-hackathon",
+    "title": "PolyFinTech100 API Hackathon - HSBC Intelligent Banking",
+    "description": "Focused on intelligent banking workflows and AI-powered customer insights",
+    "image": "",
+    "tags": ["Next.js", "TypeScript", "OpenAI", "FinTech"],
+    "hasPage": true
+  },
+  {
+    "id": "propertypulse",
+    "title": "PropertyPulse",
+    "description": "A real estate website allowing users to list their properties for rent and has a feature for users to enquire about them",
+    "image": "/projects/propertypulse.jpg",
+    "tags": ["React.js", "Node.js", "MongoDB", "Cloudinary"],
+    "hasPage": true
+  },
+  {
+    "id": "kosui",
+    "title": "Kōsui",
+    "description": "A collaborative travel-planning platform that lets users create shared calendars, organise trips by groups, and streamline every detail",
+    "image": "/projects/propertypulse.jpg",
+    "tags": ["Node.js", "Neon", "PostgreSQL", "Prisma ORM", "AI"],
+    "hasPage": false
+  },
+  {
+    "id": "sp70",
+    "title": "SP70 Website",
+    "description": "Website Mock-up for Singapore Polytechnic's 70th anniversary",
+    "image": "/projects/sp70.jpg",
+    "tags": ["Next.js", "Tailwind CSS"],
+    "hasPage": true
+  },
+  {
+    "id": "project2",
+    "title": "E-commerce App",
+    "description": "A full-stack e-commerce application",
+    "image": "/projects/ecommerce.jpg",
+    "tags": ["React", "Node.js"],
+    "hasPage": false
+  },
+  {
+    "id": "project3",
+    "title": "Portfolio Design",
+    "description": "UI/UX design for a client portfolio",
+    "image": "/projects/design.jpg",
+    "tags": ["Figma", "UI Design"],
+    "hasPage": false
+  }
+]
