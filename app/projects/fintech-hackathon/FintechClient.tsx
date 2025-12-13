@@ -405,10 +405,10 @@ export default function FintechClient() {
               benefited from real-time insights and personalized recommendations
               aligned with their goals and life stages. By merging efficiency
               with empathy, the solution strengthened client trust and improved
-              engagement quality — directly supporting HSBC&apos;s client-centric
-              strategy. The design also outlined a scalable product roadmap,
-              beginning with a pilot rollout in select markets (Singapore, UK)
-              and expanding globally in phased deployment.
+              engagement quality — directly supporting HSBC&apos;s
+              client-centric strategy. The design also outlined a scalable
+              product roadmap, beginning with a pilot rollout in select markets
+              (Singapore, UK) and expanding globally in phased deployment.
             </p>
           </div>
 
