@@ -328,7 +328,8 @@ export default function FintechClient() {
             <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
               {/* Feature 1: Portfolio Allocation */}
               <div
-                className="group cursor-pointer"
+                className="group cursor-pointer select-none"
+                draggable={false}
                 onClick={() =>
                   openLightbox(
                     "/images/allocation.png",
@@ -343,7 +344,8 @@ export default function FintechClient() {
                       src="/images/allocation.png"
                       alt="Portfolio allocation visualization"
                       fill
-                      className="object-cover transition-transform duration-500 ease-out group-hover:scale-[1.02]"
+                      draggable={false}
+                      className="object-cover transition-transform duration-500 ease-out group-hover:scale-[1.02] pointer-events-none"
                       sizes="(max-width: 768px) 100vw, 33vw"
                     />
                   </div>
@@ -360,7 +362,8 @@ export default function FintechClient() {
 
               {/* Feature 2: Market Heatmap */}
               <div
-                className="group cursor-pointer"
+                className="group cursor-pointer select-none"
+                draggable={false}
                 onClick={() =>
                   openLightbox(
                     "/images/heatmap.png",
@@ -375,7 +378,8 @@ export default function FintechClient() {
                       src="/images/heatmap.png"
                       alt="Market heatmap visualization"
                       fill
-                      className="object-cover transition-transform duration-500 ease-out group-hover:scale-[1.02]"
+                      draggable={false}
+                      className="object-cover transition-transform duration-500 ease-out group-hover:scale-[1.02] pointer-events-none"
                       sizes="(max-width: 768px) 100vw, 33vw"
                     />
                   </div>
@@ -392,7 +396,8 @@ export default function FintechClient() {
 
               {/* Feature 3: Product Recommendations */}
               <div
-                className="group cursor-pointer"
+                className="group cursor-pointer select-none"
+                draggable={false}
                 onClick={() =>
                   openLightbox(
                     "/images/productstopush.png",
@@ -407,7 +412,8 @@ export default function FintechClient() {
                       src="/images/productstopush.png"
                       alt="Product recommendations interface"
                       fill
-                      className="object-cover transition-transform duration-500 ease-out group-hover:scale-[1.02]"
+                      draggable={false}
+                      className="object-cover transition-transform duration-500 ease-out group-hover:scale-[1.02] pointer-events-none"
                       sizes="(max-width: 768px) 100vw, 33vw"
                     />
                   </div>
@@ -534,13 +540,14 @@ export default function FintechClient() {
             </div>
 
             {/* Image container with subtle shadow */}
-            <div className="relative rounded-xl overflow-hidden shadow-2xl bg-white">
+            <div className="relative rounded-xl overflow-hidden shadow-2xl bg-white select-none">
               <Image
                 src={lightbox.src}
                 alt={lightbox.alt}
                 width={1600}
                 height={1200}
-                className="w-full h-auto max-h-[75vh] object-contain"
+                draggable={false}
+                className="w-full h-auto max-h-[75vh] object-contain pointer-events-none"
                 priority
               />
             </div>
