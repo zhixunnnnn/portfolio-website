@@ -1,19 +1,34 @@
 "use client";
 import Link from "next/link";
 import Image from "next/image";
-import { ArrowLeft, ExternalLink } from "lucide-react";
+import { ArrowLeft, ExternalLink, X } from "lucide-react";
 import { useEffect, useState } from "react";
 
 export default function FintechClient() {
-  const [lightbox, setLightbox] = useState<null | { src: string; alt: string }>(
-    null
-  );
+  const [lightbox, setLightbox] = useState<null | {
+    src: string;
+    alt: string;
+    title: string;
+  }>(null);
+  const [lightboxVisible, setLightboxVisible] = useState(false);
   const [bottomGradientOpacity, setBottomGradientOpacity] = useState(1);
+
+  // Lightbox open with animation
+  const openLightbox = (src: string, alt: string, title: string) => {
+    setLightbox({ src, alt, title });
+    requestAnimationFrame(() => setLightboxVisible(true));
+  };
+
+  // Lightbox close with animation
+  const closeLightbox = () => {
+    setLightboxVisible(false);
+    setTimeout(() => setLightbox(null), 300);
+  };
 
   // Close on ESC
   useEffect(() => {
     const onKey = (e: KeyboardEvent) => {
-      if (e.key === "Escape") setLightbox(null);
+      if (e.key === "Escape") closeLightbox();
     };
     window.addEventListener("keydown", onKey);
     return () => window.removeEventListener("keydown", onKey);
@@ -228,7 +243,7 @@ export default function FintechClient() {
             </p>
           </div>
 
-          <div className="h-px bg-gray-200" />
+          <div className="h-px bg-stone-200" />
 
           {/* Solution */}
           <div>
@@ -298,98 +313,118 @@ export default function FintechClient() {
             </div>
           </div>
 
-          <div className="h-px bg-gray-200" />
+          <div className="h-px bg-stone-200" />
 
           {/* Visual Features Section */}
-          <div>
-            <h3 className="text-xl font-semibold text-slate-900 mb-6">
+          <div className="fade-up">
+            <h3 className="text-xl font-semibold text-slate-900 mb-3">
               Key Features
             </h3>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-              {/* Allocation Image */}
-              <div className="group relative overflow-hidden rounded-xl bg-slate-50 border border-slate-200 hover:border-slate-300 transition-all duration-200 hover:shadow-md">
-                <div className="aspect-[4/3] relative">
-                  <Image
-                    src="/images/allocation.png"
-                    alt="Portfolio allocation visualization showing asset distribution and investment breakdown"
-                    fill
-                    className="object-contain p-3 sm:p-4 max-h-[220px] sm:max-h-[240px] md:max-h-[260px] transition-transform duration-200 group-hover:scale-[1.01] cursor-zoom-in"
-                    sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
-                    onClick={() =>
-                      setLightbox({
-                        src: "/images/allocation.png",
-                        alt: "Portfolio allocation visualization showing asset distribution and investment breakdown",
-                      })
-                    }
-                  />
-                </div>
-                <div className="p-3 sm:p-4 bg-white border-t border-slate-200">
-                  <h4 className="text-sm font-semibold text-slate-900">
-                    Portfolio Allocation
-                  </h4>
-                  <p className="text-xs text-slate-600 mt-1">
-                    Visualize asset distribution and investment breakdown
-                  </p>
+            <p className="text-sm text-stone-500 mb-6">
+              Click to see each component
+            </p>
+
+            {/* Grid Layout */}
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
+              {/* Feature 1: Portfolio Allocation */}
+              <div
+                className="group cursor-pointer"
+                onClick={() =>
+                  openLightbox(
+                    "/images/allocation.png",
+                    "Portfolio allocation visualization showing asset distribution and investment breakdown",
+                    "Portfolio Allocation"
+                  )
+                }
+              >
+                <div className="h-full flex flex-col overflow-hidden rounded-2xl bg-white shadow-sm transition-all duration-300 ease-out group-hover:shadow-lg group-hover:-translate-y-0.5">
+                  <div className="aspect-[4/3] relative overflow-hidden">
+                    <Image
+                      src="/images/allocation.png"
+                      alt="Portfolio allocation visualization"
+                      fill
+                      className="object-cover transition-transform duration-500 ease-out group-hover:scale-[1.02]"
+                      sizes="(max-width: 768px) 100vw, 33vw"
+                    />
+                  </div>
+                  <div className="flex-1 p-4">
+                    <h4 className="text-sm font-semibold text-slate-900">
+                      Portfolio Allocation
+                    </h4>
+                    <p className="text-xs text-stone-500 mt-1.5 leading-relaxed">
+                      Visualize asset distribution and investment breakdown
+                    </p>
+                  </div>
                 </div>
               </div>
 
-              {/* Heatmap Image */}
-              <div className="group relative overflow-hidden rounded-xl bg-slate-50 border border-slate-200 hover:border-slate-300 transition-all duration-200 hover:shadow-md">
-                <div className="aspect-[4/3] relative">
-                  <Image
-                    src="/images/heatmap.png"
-                    alt="Spending heatmap showing transaction patterns and financial activity"
-                    fill
-                    className="object-contain p-3 sm:p-4 max-h-[220px] sm:max-h-[240px] md:max-h-[260px] transition-transform duration-200 group-hover:scale-[1.01] cursor-zoom-in"
-                    sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
-                    onClick={() =>
-                      setLightbox({
-                        src: "/images/heatmap.png",
-                        alt: "Spending heatmap showing transaction patterns and financial activity",
-                      })
-                    }
-                  />
-                </div>
-                <div className="p-3 sm:p-4 bg-white border-t border-slate-200">
-                  <h4 className="text-sm font-semibold text-slate-900">
-                    Market Heatmap
-                  </h4>
-                  <p className="text-xs text-slate-600 mt-1">
-                    Analyze market patterns and financial activity
-                  </p>
+              {/* Feature 2: Market Heatmap */}
+              <div
+                className="group cursor-pointer"
+                onClick={() =>
+                  openLightbox(
+                    "/images/heatmap.png",
+                    "Market heatmap showing real-time asset performance",
+                    "Market Heatmap"
+                  )
+                }
+              >
+                <div className="h-full flex flex-col overflow-hidden rounded-2xl bg-white shadow-sm transition-all duration-300 ease-out group-hover:shadow-lg group-hover:-translate-y-0.5">
+                  <div className="aspect-[4/3] relative overflow-hidden">
+                    <Image
+                      src="/images/heatmap.png"
+                      alt="Market heatmap visualization"
+                      fill
+                      className="object-cover transition-transform duration-500 ease-out group-hover:scale-[1.02]"
+                      sizes="(max-width: 768px) 100vw, 33vw"
+                    />
+                  </div>
+                  <div className="flex-1 p-4">
+                    <h4 className="text-sm font-semibold text-slate-900">
+                      Market Heatmap
+                    </h4>
+                    <p className="text-xs text-stone-500 mt-1.5 leading-relaxed">
+                      Real-time asset class performance monitoring
+                    </p>
+                  </div>
                 </div>
               </div>
 
-              {/* Products to Push Image */}
-              <div className="group relative overflow-hidden rounded-xl bg-slate-50 border border-slate-200 hover:border-slate-300 transition-all duration-200 hover:shadow-md">
-                <div className="aspect-[4/3] relative">
-                  <Image
-                    src="/images/productstopush.png"
-                    alt="Product recommendations and suggestions for relationship managers"
-                    fill
-                    className="object-contain p-3 sm:p-4 max-h-[220px] sm:max-h-[240px] md:max-h-[260px] transition-transform duration-200 group-hover:scale-[1.01] cursor-zoom-in"
-                    sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
-                    onClick={() =>
-                      setLightbox({
-                        src: "/images/productstopush.png",
-                        alt: "Product recommendations and suggestions for relationship managers",
-                      })
-                    }
-                  />
-                </div>
-                <div className="p-3 sm:p-4 bg-white border-t border-slate-200">
-                  <h4 className="text-sm font-semibold text-slate-900">
-                    Product Recommendations
-                  </h4>
-                  <p className="text-xs text-slate-600 mt-1">
-                    AI-driven product suggestions for clients
-                  </p>
+              {/* Feature 3: Product Recommendations */}
+              <div
+                className="group cursor-pointer"
+                onClick={() =>
+                  openLightbox(
+                    "/images/productstopush.png",
+                    "AI-driven product recommendations for relationship managers",
+                    "Product Recommendations"
+                  )
+                }
+              >
+                <div className="h-full flex flex-col overflow-hidden rounded-2xl bg-white shadow-sm transition-all duration-300 ease-out group-hover:shadow-lg group-hover:-translate-y-0.5">
+                  <div className="aspect-[4/3] relative overflow-hidden">
+                    <Image
+                      src="/images/productstopush.png"
+                      alt="Product recommendations interface"
+                      fill
+                      className="object-cover transition-transform duration-500 ease-out group-hover:scale-[1.02]"
+                      sizes="(max-width: 768px) 100vw, 33vw"
+                    />
+                  </div>
+                  <div className="flex-1 p-4">
+                    <h4 className="text-sm font-semibold text-slate-900">
+                      Product Recommendations
+                    </h4>
+                    <p className="text-xs text-stone-500 mt-1.5 leading-relaxed">
+                      AI-curated suggestions with ESG ratings
+                    </p>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
 
-          <div className="h-px bg-gray-200" />
+          <div className="h-px bg-stone-200" />
 
           <div>
             <h3 className="text-xl font-semibold text-slate-900 mb-2">
@@ -412,7 +447,7 @@ export default function FintechClient() {
             </p>
           </div>
 
-          <div className="h-px bg-gray-200" />
+          <div className="h-px bg-stone-200" />
 
           {/* Self Reflection */}
           <div>
@@ -454,32 +489,66 @@ export default function FintechClient() {
         </div>
       </section>
 
-      {/* Lightbox Modal */}
+      {/* Elegant Lightbox Modal */}
       {lightbox && (
         <div
-          className="fixed inset-0 z-50 flex items-center justify-center bg-black/70 p-3 sm:p-4"
-          onClick={() => setLightbox(null)}
+          className={`fixed inset-0 z-50 flex items-center justify-center transition-all duration-300 ease-out ${
+            lightboxVisible ? "opacity-100" : "opacity-0"
+          }`}
+          onClick={closeLightbox}
           role="dialog"
           aria-modal="true"
+          aria-label={lightbox.title}
         >
+          {/* Backdrop with blur */}
           <div
-            className="relative max-w-5xl w-full max-h-[85vh]"
+            className={`absolute inset-0 bg-stone-950/80 backdrop-blur-md transition-opacity duration-300 ${
+              lightboxVisible ? "opacity-100" : "opacity-0"
+            }`}
+          />
+
+          {/* Content container */}
+          <div
+            className={`relative z-10 w-full max-w-5xl mx-4 transition-all duration-300 ease-out ${
+              lightboxVisible
+                ? "opacity-100 scale-100 translate-y-0"
+                : "opacity-0 scale-95 translate-y-4"
+            }`}
             onClick={(e) => e.stopPropagation()}
           >
-            <Image
-              src={lightbox.src}
-              alt={lightbox.alt}
-              width={1600}
-              height={1200}
-              className="w-full h-auto max-h-[85vh] object-contain rounded-lg shadow-2xl"
-              priority
-            />
-            <button
-              className="absolute top-2 right-2 text-white/90 bg-black/40 hover:bg-black/60 rounded-md px-3 py-1.5 text-sm font-medium"
-              onClick={() => setLightbox(null)}
-            >
-              Close
-            </button>
+            {/* Title bar */}
+            <div className="flex items-center justify-between mb-4">
+              <h3 className="text-white/90 text-lg font-medium">
+                {lightbox.title}
+              </h3>
+              <button
+                className="flex items-center gap-2 text-white/70 hover:text-white transition-colors duration-200 text-sm font-medium"
+                onClick={closeLightbox}
+              >
+                <span className="hidden sm:inline">Close</span>
+                <kbd className="hidden sm:inline-flex items-center px-1.5 py-0.5 bg-white/10 rounded text-[10px] font-mono">
+                  ESC
+                </kbd>
+                <X className="w-5 h-5 sm:hidden" />
+              </button>
+            </div>
+
+            {/* Image container with subtle shadow */}
+            <div className="relative rounded-xl overflow-hidden shadow-2xl bg-white">
+              <Image
+                src={lightbox.src}
+                alt={lightbox.alt}
+                width={1600}
+                height={1200}
+                className="w-full h-auto max-h-[75vh] object-contain"
+                priority
+              />
+            </div>
+
+            {/* Caption */}
+            <p className="text-center text-white/50 text-sm mt-4 max-w-2xl mx-auto">
+              {lightbox.alt}
+            </p>
           </div>
         </div>
       )}
