@@ -249,7 +249,7 @@ export default function FintechClient() {
               powered by concept-level vector search and OpenAI-based
               summarization models to simulate real-time intelligence. The
               dashboard presented a compliant, privacy-first view of each
-              client's profile, upcoming cash constraints, and suggested
+              client&apos;s profile, upcoming cash constraints, and suggested
               actions, blending predictive analytics with explainable
               recommendations. This created a balance between automation and
               human expertise — improving efficiency without compromising client
@@ -405,7 +405,7 @@ export default function FintechClient() {
               benefited from real-time insights and personalized recommendations
               aligned with their goals and life stages. By merging efficiency
               with empathy, the solution strengthened client trust and improved
-              engagement quality — directly supporting HSBC's client-centric
+              engagement quality — directly supporting HSBC&apos;s client-centric
               strategy. The design also outlined a scalable product roadmap,
               beginning with a pilot rollout in select markets (Singapore, UK)
               and expanding globally in phased deployment.

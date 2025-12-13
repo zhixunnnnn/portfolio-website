@@ -3,7 +3,7 @@ import { MapPin, Mail, Linkedin, ArrowUpRight } from "lucide-react";
 import projectsData from "@/data/projects.json";
 import Link from "next/link";
 import Image from "next/image";
-import { useEffect, useState, useRef } from "react";
+import { useEffect, useState } from "react";
 
 interface Project {
   id: string;
