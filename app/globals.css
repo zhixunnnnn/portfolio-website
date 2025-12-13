@@ -166,13 +166,24 @@ nav {
 } */
 
 /* Adaptive fade gradients for top and bottom of pages */
+@import url("/fonts/inter.css");
+
 .fade-gradient-top {
   background: linear-gradient(
     to bottom,
     var(--fade-surface, var(--background)) 0%,
-    var(--fade-surface, var(--background)) 60%,
-    color-mix(in srgb, var(--fade-surface, var(--background)) 50%, transparent)
-      85%,
+    font-family: -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    "Roboto",
+    "Oxygen",
+    "Ubuntu",
+    "Cantarell",
+    "Fira Sans",
+    "Droid Sans",
+    "Helvetica Neue",
+    Inter,
+    sans-serif; 85%,
     transparent 100%
   );
 }
