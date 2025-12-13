@@ -68,32 +68,30 @@ export default function Navbar() {
           />
         </Link>
 
-        <div className="relative">
-          <div ref={navRef}>
-            <button
-              onClick={() => setIsOpen(!isOpen)}
-              className="relative h-12 md:h-14 max-h-14 w-12 md:w-14 max-w-14 p-0 bg-gradient-to-b from-[#a3bded] to-[#6991c7] rounded-full flex items-center justify-center transition-all duration-300 hover:from-[#b5c9f0] hover:to-[#7a9fd1]"
-              aria-expanded={isOpen}
-              aria-label="Toggle menu"
-            >
-              <div className="relative w-6 h-6">
-                <Menu
-                  className={`absolute inset-0 text-white transition-all duration-300 ${
-                    isOpen ? "opacity-0 rotate-90" : "opacity-100 rotate-0"
-                  }`}
-                  strokeWidth={2.5}
-                  size={24}
-                />
-                <X
-                  className={`absolute inset-0 text-white transition-all duration-300 ${
-                    isOpen ? "opacity-100 rotate-0" : "opacity-0 -rotate-90"
-                  }`}
-                  strokeWidth={2.5}
-                  size={24}
-                />
-              </div>
-            </button>
-          </div>
+        <div className="relative" ref={navRef}>
+          <button
+            onClick={() => setIsOpen(!isOpen)}
+            className="relative h-12 md:h-14 max-h-14 w-12 md:w-14 max-w-14 p-0 bg-gradient-to-b from-[#a3bded] to-[#6991c7] rounded-full flex items-center justify-center transition-all duration-300 hover:from-[#b5c9f0] hover:to-[#7a9fd1]"
+            aria-expanded={isOpen}
+            aria-label="Toggle menu"
+          >
+            <div className="relative w-6 h-6">
+              <Menu
+                className={`absolute inset-0 text-white transition-all duration-300 ${
+                  isOpen ? "opacity-0 rotate-90" : "opacity-100 rotate-0"
+                }`}
+                strokeWidth={2.5}
+                size={24}
+              />
+              <X
+                className={`absolute inset-0 text-white transition-all duration-300 ${
+                  isOpen ? "opacity-100 rotate-0" : "opacity-0 -rotate-90"
+                }`}
+                strokeWidth={2.5}
+                size={24}
+              />
+            </div>
+          </button>
 
           <div
             className={`absolute right-0 mt-2.5 bg-[#6991c7]/95 backdrop-blur-sm shadow-xl shadow-slate-900/10 rounded-2xl overflow-hidden transition-all duration-200 ease-out origin-top-right ${

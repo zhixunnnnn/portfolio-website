@@ -205,31 +205,23 @@ export default function Home() {
               Singapore Polytechnic, specialising in software development. I
               focus on building web applications that are accessible,
               performant, and dependable, with an emphasis on clean architecture
-              and thoughtful engineering decisions. I enjoy taking products from
-              idea to deployment, balancing speed with quality, and shipping
-              features that solve real problems without bloating the experience.
+              and thoughtful engineering decisions.
             </p>
             <p>
-              I&rsquo;m also deeply interested in user interface design. I care
-              about the details that make software feel premium and intuitive:
-              clear visual hierarchy, consistent spacing, thoughtful
-              micro-interactions, and layouts that guide users naturally. I like
-              bridging design and engineering, turning high-level concepts into
-              clean, responsive interfaces that look good and stay maintainable.
+              I&rsquo;m also deeply interested in user interface design—the
+              details that make software feel premium and intuitive. I enjoy
+              bridging design and engineering, turning concepts into clean,
+              responsive interfaces that look good and stay maintainable.
             </p>
-            <p>
-              Outside of coding, I&rsquo;m into Formula 1, basketball, and
-              mobile games. What I like most about them is the mix of strategy,
-              fast decision-making, and constant iteration. Those same themes
-              show up in how I work: prioritising what matters, and refining
-              until the result feels right and perfect to me.
-            </p>
-            <p>
-              More than anything, I enjoy creating things. Whether it&rsquo;s a
-              side project, a small tool that removes friction, or a new tech
-              experiment, I&rsquo;m motivated by building something useful,
-              polishing it, and putting it in front of people.
-            </p>
+          </div>
+          <div className="mt-6">
+            <Link
+              href="/about"
+              className="inline-flex items-center gap-1.5 text-sm text-slate-700 hover:text-slate-900 font-medium transition-colors group"
+            >
+              <span>Learn More About Me</span>
+              <ArrowUpRight className="w-3.5 h-3.5 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
+            </Link>
           </div>
         </div>
       </section>

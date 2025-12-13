@@ -95,14 +95,30 @@ export default function AboutPage() {
               Singapore Polytechnic, specialising in software development. I
               focus on building web applications that are accessible,
               performant, and dependable, with an emphasis on clean architecture
-              and thoughtful engineering decisions.
+              and thoughtful engineering decisions. I enjoy taking products from
+              idea to deployment, balancing speed with quality, and shipping
+              features that solve real problems without bloating the experience.
             </p>
             <p>
-              I enjoy taking products from idea to deployment, balancing speed
-              with quality, and shipping features that solve real problems
-              without bloating the experience. I&rsquo;m also deeply interested
-              in user interface design—the details that make software feel
-              premium and intuitive.
+              I&rsquo;m also deeply interested in user interface design. I care
+              about the details that make software feel premium and intuitive:
+              clear visual hierarchy, consistent spacing, thoughtful
+              micro-interactions, and layouts that guide users naturally. I like
+              bridging design and engineering, turning high-level concepts into
+              clean, responsive interfaces that look good and stay maintainable.
+            </p>
+            <p>
+              Outside of coding, I&rsquo;m into Formula 1, basketball, and
+              mobile games. What I like most about them is the mix of strategy,
+              fast decision-making, and constant iteration. Those same themes
+              show up in how I work: prioritising what matters, and refining
+              until the result feels right and perfect to me.
+            </p>
+            <p>
+              More than anything, I enjoy creating things. Whether it&rsquo;s a
+              side project, a small tool that removes friction, or a new tech
+              experiment, I&rsquo;m motivated by building something useful,
+              polishing it, and putting it in front of people.
             </p>
           </div>
         </div>
@@ -198,13 +214,13 @@ export default function AboutPage() {
             Skills & Technologies
           </h2>
 
-          <div className="space-y-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {/* Languages */}
             <div>
               <h3 className="text-xs font-medium uppercase tracking-wide text-slate-400 mb-4">
                 Languages
               </h3>
-              <div className="flex flex-wrap gap-3">
+              <div className="space-y-3">
                 {[
                   {
                     name: "TypeScript",
@@ -215,12 +231,12 @@ export default function AboutPage() {
                     icon: "https://cdn.simpleicons.org/javascript/F7DF1E",
                   },
                   {
-                    name: "Java",
-                    icon: "https://raw.githubusercontent.com/devicons/devicon/master/icons/java/java-original.svg",
-                  },
-                  {
                     name: "Python",
                     icon: "https://cdn.simpleicons.org/python/3776AB",
+                  },
+                  {
+                    name: "Java",
+                    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg",
                   },
                   {
                     name: "HTML",
@@ -228,18 +244,15 @@ export default function AboutPage() {
                   },
                   {
                     name: "CSS",
-                    icon: "https://cdn.simpleicons.org/css3/1572B6",
+                    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg",
                   },
                 ].map((tech) => (
-                  <div
-                    key={tech.name}
-                    className="flex items-center gap-2 px-3 py-2 bg-white border border-slate-200 rounded-lg"
-                  >
+                  <div key={tech.name} className="flex items-center gap-2.5">
                     <Image
                       src={tech.icon}
                       alt={tech.name}
-                      width={16}
-                      height={16}
+                      width={18}
+                      height={18}
                       className="flex-shrink-0"
                       unoptimized
                     />
@@ -252,9 +265,9 @@ export default function AboutPage() {
             {/* Frameworks & Libraries */}
             <div>
               <h3 className="text-xs font-medium uppercase tracking-wide text-slate-400 mb-4">
-                Frameworks & Libraries
+                Frameworks
               </h3>
-              <div className="flex flex-wrap gap-3">
+              <div className="space-y-3">
                 {[
                   {
                     name: "Next.js",
@@ -276,16 +289,17 @@ export default function AboutPage() {
                     name: "Framer Motion",
                     icon: "https://cdn.simpleicons.org/framer/0055FF",
                   },
+                  {
+                    name: "Express.js",
+                    icon: "https://cdn.simpleicons.org/express/000000",
+                  },
                 ].map((tech) => (
-                  <div
-                    key={tech.name}
-                    className="flex items-center gap-2 px-3 py-2 bg-white border border-slate-200 rounded-lg"
-                  >
+                  <div key={tech.name} className="flex items-center gap-2.5">
                     <Image
                       src={tech.icon}
                       alt={tech.name}
-                      width={16}
-                      height={16}
+                      width={18}
+                      height={18}
                       className="flex-shrink-0"
                       unoptimized
                     />
@@ -300,30 +314,31 @@ export default function AboutPage() {
               <h3 className="text-xs font-medium uppercase tracking-wide text-slate-400 mb-4">
                 Databases
               </h3>
-              <div className="flex flex-wrap gap-3">
+              <div className="space-y-3">
                 {[
                   {
                     name: "PostgreSQL",
                     icon: "https://cdn.simpleicons.org/postgresql/4169E1",
                   },
                   {
-                    name: "MongoDB",
+                    name: "MongoDB Atlas",
                     icon: "https://cdn.simpleicons.org/mongodb/47A248",
                   },
                   {
                     name: "MySQL",
                     icon: "https://cdn.simpleicons.org/mysql/4479A1",
                   },
+                  {
+                    name: "Prisma ORM",
+                    icon: "https://cdn.simpleicons.org/prisma/2D3748",
+                  },
                 ].map((tech) => (
-                  <div
-                    key={tech.name}
-                    className="flex items-center gap-2 px-3 py-2 bg-white border border-slate-200 rounded-lg"
-                  >
+                  <div key={tech.name} className="flex items-center gap-2.5">
                     <Image
                       src={tech.icon}
                       alt={tech.name}
-                      width={16}
-                      height={16}
+                      width={18}
+                      height={18}
                       className="flex-shrink-0"
                       unoptimized
                     />
@@ -336,9 +351,9 @@ export default function AboutPage() {
             {/* Tools & Platforms */}
             <div>
               <h3 className="text-xs font-medium uppercase tracking-wide text-slate-400 mb-4">
-                Tools & Platforms
+                Tools
               </h3>
-              <div className="flex flex-wrap gap-3">
+              <div className="space-y-3">
                 {[
                   {
                     name: "Git",
@@ -358,18 +373,15 @@ export default function AboutPage() {
                   },
                   {
                     name: "VS Code",
-                    icon: "https://cdn.simpleicons.org/visualstudiocode/007ACC",
+                    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg",
                   },
                 ].map((tech) => (
-                  <div
-                    key={tech.name}
-                    className="flex items-center gap-2 px-3 py-2 bg-white border border-slate-200 rounded-lg"
-                  >
+                  <div key={tech.name} className="flex items-center gap-2.5">
                     <Image
                       src={tech.icon}
                       alt={tech.name}
-                      width={16}
-                      height={16}
+                      width={18}
+                      height={18}
                       className="flex-shrink-0"
                       unoptimized
                     />
@@ -393,13 +405,12 @@ export default function AboutPage() {
             {/* Singapore Polytechnic */}
             <div className="group py-6">
               <div className="flex flex-col sm:flex-row sm:items-start gap-4">
-                <div className="flex-shrink-0 w-10 h-10 rounded-lg overflow-hidden bg-slate-100 flex items-center justify-center">
+                <div className="flex-shrink-0 w-10 h-10 rounded-lg overflow-hidden bg-white flex items-center justify-center">
                   <Image
-                    src="https://cdn.simpleicons.org/singaporeairlines/F9BA48"
+                    src="https://www.sp.edu.sg/favicon.ico"
                     alt="Singapore Polytechnic"
-                    width={24}
-                    height={24}
-                    className="opacity-80"
+                    width={28}
+                    height={28}
                     unoptimized
                   />
                 </div>
@@ -453,7 +464,7 @@ export default function AboutPage() {
                         GCE O-Level
                       </h3>
                       <p className="text-sm text-slate-600 mt-0.5">
-                        Secondary School
+                        Compassvale Secondary School
                       </p>
                     </div>
                     <span className="text-xs text-slate-500 font-medium whitespace-nowrap">
@@ -461,8 +472,10 @@ export default function AboutPage() {
                     </span>
                   </div>
                   <p className="text-sm text-slate-600 mt-3 leading-relaxed max-w-2xl">
-                    Completed GCE O-Level examinations with focus on
-                    Mathematics, Science, and Computing studies.
+                    Completed GCE O-Level examinations. Subjects included Pure
+                    Humanities (History), Elective Humanities (Geography &
+                    Social Studies), Additional & Elementary Mathematics, and
+                    Combined Science (Chemistry & Physics).
                   </p>
                 </div>
               </div>
@@ -470,31 +483,6 @@ export default function AboutPage() {
           </div>
         </div>
       </section>
-
-      {/* Interests */}
-      <section className="px-6 py-16 fade-up">
-        <div className="container mx-auto max-w-4xl">
-          <h2 className="text-sm font-semibold uppercase tracking-wide text-slate-500 mb-6">
-            Beyond Code
-          </h2>
-          <div className="space-y-4 text-slate-700 text-base leading-relaxed max-w-3xl">
-            <p>
-              Outside of coding, I&rsquo;m into Formula 1, basketball, and
-              mobile games. What I like most about them is the mix of strategy,
-              fast decision-making, and constant iteration—themes that show up
-              in how I work: prioritising what matters, and refining until the
-              result feels right.
-            </p>
-            <p>
-              More than anything, I enjoy creating things. Whether it&rsquo;s a
-              side project, a small tool that removes friction, or a new tech
-              experiment, I&rsquo;m motivated by building something useful,
-              polishing it, and putting it in front of people.
-            </p>
-          </div>
-        </div>
-      </section>
-
       <div className="h-20" />
     </main>
   );

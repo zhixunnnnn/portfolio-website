@@ -172,7 +172,7 @@ export default function SpotlightSearch() {
               value={query}
               onChange={(e) => setQuery(e.target.value)}
               onKeyDown={handleInputKeyDown}
-              placeholder="Search projects..."
+              placeholder="Search by name, description, or tech stack..."
               className="flex-1 bg-transparent text-slate-900 placeholder:text-stone-400 text-base outline-none"
             />
             <kbd className="hidden sm:flex items-center gap-1 px-2.5 py-1.5 text-xs font-medium text-stone-500 bg-stone-100 rounded-lg border border-stone-200">
@@ -195,6 +195,9 @@ export default function SpotlightSearch() {
               {filteredProjects.length === 0 ? (
                 <div className="px-5 py-6 text-center text-stone-500">
                   <p className="text-sm">No projects found</p>
+                  <p className="text-xs text-stone-400 mt-1">
+                    Try searching by name or technology (e.g. React, Next.js)
+                  </p>
                 </div>
               ) : (
                 <div className="p-3">
