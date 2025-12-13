@@ -66,14 +66,14 @@ export default function FintechClient() {
 
   return (
     <main className="relative min-h-screen text-slate-900">
-      <div className="fixed inset-0 z-[-2] bg-[#F8FAFC]" />
+      <div className="fixed inset-0 z-[-2] bg-[#F5F1EA]" />
 
       {/* Top fade gradient - light slate to transparent */}
       <div
         className="pointer-events-none fixed top-0 left-0 right-0 h-20 sm:h-24 z-40"
         style={{
           background:
-            "linear-gradient(to bottom, #F8FAFC 0%, rgba(248, 250, 252, 0.8) 40%, rgba(248, 250, 252, 0.4) 70%, transparent 100%)",
+            "linear-gradient(to bottom, #F5F1EA 0%, rgba(245, 241, 234, 0.8) 40%, rgba(245, 241, 234, 0.4) 70%, transparent 100%)",
         }}
       />
 
@@ -82,7 +82,7 @@ export default function FintechClient() {
         className="pointer-events-none fixed bottom-0 left-0 right-0 h-20 sm:h-24 z-40 transition-opacity duration-300"
         style={{
           background:
-            "linear-gradient(to top, #ffffff 0%, rgba(255, 255, 255, 0.8) 40%, rgba(255, 255, 255, 0.4) 70%, transparent 100%)",
+            "linear-gradient(to top, #F5F1EA 0%, rgba(245, 241, 234, 0.8) 40%, rgba(245, 241, 234, 0.4) 70%, transparent 100%)",
           opacity: bottomGradientOpacity,
         }}
       />
@@ -118,10 +118,10 @@ export default function FintechClient() {
                   Intelligent Banking
                 </h1>
                 <div className="mt-2 flex flex-wrap items-center gap-2">
-                  <span className="inline-flex items-center rounded-lg bg-slate-100 text-slate-800 text-xs font-semibold px-2.5 py-1 border border-slate-200">
+                  <span className="inline-flex items-center rounded-lg bg-stone-100 text-stone-700 text-xs font-semibold px-2.5 py-1 border border-stone-200">
                     PolyFinTech API Hackathon
                   </span>
-                  <span className="inline-flex items-center rounded-lg bg-slate-100 text-slate-800 text-xs font-semibold px-2.5 py-1 border border-slate-200">
+                  <span className="inline-flex items-center rounded-lg bg-stone-100 text-stone-700 text-xs font-semibold px-2.5 py-1 border border-stone-200">
                     Category Finalist · 2025
                   </span>
                 </div>

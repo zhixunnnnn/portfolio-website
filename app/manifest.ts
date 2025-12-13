@@ -8,7 +8,7 @@ export default function manifest(): MetadataRoute.Manifest {
       "Full-stack developer building clean, performant web apps with modern technologies. Based in Singapore.",
     start_url: "/",
     display: "standalone",
-    background_color: "#F8FAFC",
+    background_color: "#F5F1EA",
     theme_color: "#0FFFFF",
     orientation: "portrait-primary",
     icons: [

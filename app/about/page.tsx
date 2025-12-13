@@ -32,14 +32,14 @@ export default function AboutPage() {
 
   return (
     <main className="relative min-h-screen text-slate-900">
-      <div className="fixed inset-0 z-[-2] bg-[#F8FAFC]" />
+      <div className="fixed inset-0 z-[-2] bg-[#F5F1EA]" />
 
       {/* Top fade gradient */}
       <div
         className="pointer-events-none fixed top-0 left-0 right-0 h-20 sm:h-24 z-40"
         style={{
           background:
-            "linear-gradient(to bottom, #F8FAFC 0%, rgba(248, 250, 252, 0.8) 40%, rgba(248, 250, 252, 0.4) 70%, transparent 100%)",
+            "linear-gradient(to bottom, #F5F1EA 0%, rgba(245, 241, 234, 0.8) 40%, rgba(245, 241, 234, 0.4) 70%, transparent 100%)",
         }}
       />
 
@@ -58,7 +58,8 @@ export default function AboutPage() {
             About Me
           </h1>
           <p className="fade-up text-lg text-slate-600 max-w-2xl">
-            Full-stack developer passionate about building clean, performant web applications.
+            Full-stack developer passionate about building clean, performant web
+            applications.
           </p>
 
           <div className="fade-up flex items-center gap-3 mt-6">
@@ -205,12 +206,30 @@ export default function AboutPage() {
               </h3>
               <div className="flex flex-wrap gap-3">
                 {[
-                  { name: "TypeScript", icon: "https://cdn.simpleicons.org/typescript/3178C6" },
-                  { name: "JavaScript", icon: "https://cdn.simpleicons.org/javascript/F7DF1E" },
-                  { name: "Java", icon: "https://raw.githubusercontent.com/devicons/devicon/master/icons/java/java-original.svg" },
-                  { name: "Python", icon: "https://cdn.simpleicons.org/python/3776AB" },
-                  { name: "HTML", icon: "https://cdn.simpleicons.org/html5/E34F26" },
-                  { name: "CSS", icon: "https://cdn.simpleicons.org/css3/1572B6" },
+                  {
+                    name: "TypeScript",
+                    icon: "https://cdn.simpleicons.org/typescript/3178C6",
+                  },
+                  {
+                    name: "JavaScript",
+                    icon: "https://cdn.simpleicons.org/javascript/F7DF1E",
+                  },
+                  {
+                    name: "Java",
+                    icon: "https://raw.githubusercontent.com/devicons/devicon/master/icons/java/java-original.svg",
+                  },
+                  {
+                    name: "Python",
+                    icon: "https://cdn.simpleicons.org/python/3776AB",
+                  },
+                  {
+                    name: "HTML",
+                    icon: "https://cdn.simpleicons.org/html5/E34F26",
+                  },
+                  {
+                    name: "CSS",
+                    icon: "https://cdn.simpleicons.org/css3/1572B6",
+                  },
                 ].map((tech) => (
                   <div
                     key={tech.name}
@@ -237,11 +256,26 @@ export default function AboutPage() {
               </h3>
               <div className="flex flex-wrap gap-3">
                 {[
-                  { name: "Next.js", icon: "https://cdn.simpleicons.org/nextdotjs/000000" },
-                  { name: "React", icon: "https://cdn.simpleicons.org/react/61DAFB" },
-                  { name: "Node.js", icon: "https://cdn.simpleicons.org/nodedotjs/339933" },
-                  { name: "Tailwind CSS", icon: "https://cdn.simpleicons.org/tailwindcss/06B6D4" },
-                  { name: "Framer Motion", icon: "https://cdn.simpleicons.org/framer/0055FF" },
+                  {
+                    name: "Next.js",
+                    icon: "https://cdn.simpleicons.org/nextdotjs/000000",
+                  },
+                  {
+                    name: "React",
+                    icon: "https://cdn.simpleicons.org/react/61DAFB",
+                  },
+                  {
+                    name: "Node.js",
+                    icon: "https://cdn.simpleicons.org/nodedotjs/339933",
+                  },
+                  {
+                    name: "Tailwind CSS",
+                    icon: "https://cdn.simpleicons.org/tailwindcss/06B6D4",
+                  },
+                  {
+                    name: "Framer Motion",
+                    icon: "https://cdn.simpleicons.org/framer/0055FF",
+                  },
                 ].map((tech) => (
                   <div
                     key={tech.name}
@@ -268,9 +302,18 @@ export default function AboutPage() {
               </h3>
               <div className="flex flex-wrap gap-3">
                 {[
-                  { name: "PostgreSQL", icon: "https://cdn.simpleicons.org/postgresql/4169E1" },
-                  { name: "MongoDB", icon: "https://cdn.simpleicons.org/mongodb/47A248" },
-                  { name: "MySQL", icon: "https://cdn.simpleicons.org/mysql/4479A1" },
+                  {
+                    name: "PostgreSQL",
+                    icon: "https://cdn.simpleicons.org/postgresql/4169E1",
+                  },
+                  {
+                    name: "MongoDB",
+                    icon: "https://cdn.simpleicons.org/mongodb/47A248",
+                  },
+                  {
+                    name: "MySQL",
+                    icon: "https://cdn.simpleicons.org/mysql/4479A1",
+                  },
                 ].map((tech) => (
                   <div
                     key={tech.name}
@@ -297,11 +340,26 @@ export default function AboutPage() {
               </h3>
               <div className="flex flex-wrap gap-3">
                 {[
-                  { name: "Git", icon: "https://cdn.simpleicons.org/git/F05032" },
-                  { name: "GitHub", icon: "https://cdn.simpleicons.org/github/181717" },
-                  { name: "Vercel", icon: "https://cdn.simpleicons.org/vercel/000000" },
-                  { name: "Figma", icon: "https://cdn.simpleicons.org/figma/F24E1E" },
-                  { name: "VS Code", icon: "https://cdn.simpleicons.org/visualstudiocode/007ACC" },
+                  {
+                    name: "Git",
+                    icon: "https://cdn.simpleicons.org/git/F05032",
+                  },
+                  {
+                    name: "GitHub",
+                    icon: "https://cdn.simpleicons.org/github/181717",
+                  },
+                  {
+                    name: "Vercel",
+                    icon: "https://cdn.simpleicons.org/vercel/000000",
+                  },
+                  {
+                    name: "Figma",
+                    icon: "https://cdn.simpleicons.org/figma/F24E1E",
+                  },
+                  {
+                    name: "VS Code",
+                    icon: "https://cdn.simpleicons.org/visualstudiocode/007ACC",
+                  },
                 ].map((tech) => (
                   <div
                     key={tech.name}
@@ -360,18 +418,19 @@ export default function AboutPage() {
                     </span>
                   </div>
                   <p className="text-sm text-slate-600 mt-3 leading-relaxed max-w-2xl">
-                    Specialising in software development with coursework in web development,
-                    database management, object-oriented programming, and software engineering
-                    principles. Currently in Year 2.
+                    Specialising in software development with coursework in web
+                    development, database management, object-oriented
+                    programming, and software engineering principles. Currently
+                    in Year 2.
                   </p>
                   <div className="mt-3 flex flex-wrap gap-2">
-                    <span className="text-xs px-2 py-1 bg-slate-100 text-slate-600 rounded">
+                    <span className="text-xs px-2 py-1 bg-stone-100 text-stone-600 rounded">
                       Software Development
                     </span>
-                    <span className="text-xs px-2 py-1 bg-slate-100 text-slate-600 rounded">
+                    <span className="text-xs px-2 py-1 bg-stone-100 text-stone-600 rounded">
                       Web Technologies
                     </span>
-                    <span className="text-xs px-2 py-1 bg-slate-100 text-slate-600 rounded">
+                    <span className="text-xs px-2 py-1 bg-stone-100 text-stone-600 rounded">
                       Database Systems
                     </span>
                   </div>
@@ -402,8 +461,8 @@ export default function AboutPage() {
                     </span>
                   </div>
                   <p className="text-sm text-slate-600 mt-3 leading-relaxed max-w-2xl">
-                    Completed GCE O-Level examinations with focus on Mathematics,
-                    Science, and Computing studies.
+                    Completed GCE O-Level examinations with focus on
+                    Mathematics, Science, and Computing studies.
                   </p>
                 </div>
               </div>

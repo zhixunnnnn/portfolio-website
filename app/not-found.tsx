@@ -313,7 +313,7 @@ export default function NotFound() {
   return (
     <main className="relative min-h-screen flex flex-col items-center justify-center text-slate-900 overflow-hidden">
       {/* Background */}
-      <div className="fixed inset-0 z-[-2] bg-[#F8FAFC]" />
+      <div className="fixed inset-0 z-[-2] bg-[#F5F1EA]" />
 
       {/* Animated elements */}
       <AnimatedGrid />
@@ -325,7 +325,7 @@ export default function NotFound() {
         className="pointer-events-none fixed top-0 left-0 right-0 h-20 sm:h-24 z-40"
         style={{
           background:
-            "linear-gradient(to bottom, #F8FAFC 0%, rgba(248, 250, 252, 0.8) 40%, rgba(248, 250, 252, 0.4) 70%, transparent 100%)",
+            "linear-gradient(to bottom, #F5F1EA 0%, rgba(245, 241, 234, 0.8) 40%, rgba(245, 241, 234, 0.4) 70%, transparent 100%)",
         }}
       />
 
@@ -334,7 +334,7 @@ export default function NotFound() {
         className="pointer-events-none fixed bottom-0 left-0 right-0 h-20 sm:h-24 z-40"
         style={{
           background:
-            "linear-gradient(to top, #ffffff 0%, rgba(255, 255, 255, 0.8) 40%, rgba(255, 255, 255, 0.4) 70%, transparent 100%)",
+            "linear-gradient(to top, #F5F1EA 0%, rgba(245, 241, 234, 0.8) 40%, rgba(245, 241, 234, 0.4) 70%, transparent 100%)",
         }}
       />
 
