@@ -1,7 +1,7 @@
 "use client";
 import Link from "next/link";
 import Image from "next/image";
-import { ArrowLeft, ExternalLink, X } from "lucide-react";
+import { ArrowLeft, ExternalLink, Github, X } from "lucide-react";
 import { useEffect, useState } from "react";
 
 export default function FintechClient() {
@@ -70,7 +70,7 @@ export default function FintechClient() {
       {
         threshold: 0.1,
         rootMargin: "0px 0px -50px 0px",
-      }
+      },
     );
 
     const elements = document.querySelectorAll(".fade-up");
@@ -144,16 +144,26 @@ export default function FintechClient() {
                   </div>
                 </div>
 
-                {/* CTA Button - aligned with title */}
-                <div className="mt-4 sm:mt-0 sm:flex-shrink-0 w-full sm:w-auto">
+                {/* CTA Buttons - aligned with title */}
+                <div className="mt-4 sm:mt-0 sm:flex-shrink-0 flex gap-2 w-full sm:w-auto">
+                  <Link
+                    href="https://github.com/zhixunnnnn/fintech"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="View Intelligent Banking source code on GitHub"
+                    className="inline-flex items-center justify-center flex-1 sm:flex-none gap-2 rounded-xl bg-slate-800 text-white text-[15px] font-medium px-2.5 py-1.5 shadow-sm hover:bg-slate-700 hover:shadow-md transition-all duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-slate-900 focus-visible:ring-offset-2"
+                  >
+                    <Github className="w-4 h-4" strokeWidth={2.5} />
+                    Source
+                  </Link>
                   <Link
                     href="https://fintech-l4pi.vercel.app"
                     target="_blank"
                     rel="noopener noreferrer"
                     aria-label="View the live Intelligent Banking project"
-                    className="inline-flex items-center justify-center w-full sm:w-auto gap-2 rounded-xl bg-[#DB0011] text-white text-[15px] font-medium px-2.5 py-1.5 shadow-sm hover:bg-[#9d1722] hover:shadow-md transition-all duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-slate-900 focus-visible:ring-offset-2"
+                    className="inline-flex items-center justify-center flex-1 sm:flex-none gap-2 rounded-xl bg-[#DB0011] text-white text-[15px] font-medium px-2.5 py-1.5 shadow-sm hover:bg-[#9d1722] hover:shadow-md transition-all duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-slate-900 focus-visible:ring-offset-2"
                   >
-                    View Live Site
+                    Live Site
                     <ExternalLink className="w-4 h-4" strokeWidth={2.5} />
                   </Link>
                 </div>
@@ -337,7 +347,7 @@ export default function FintechClient() {
                   openLightbox(
                     "/images/allocation.png",
                     "Portfolio allocation visualization showing asset distribution and investment breakdown",
-                    "Portfolio Allocation"
+                    "Portfolio Allocation",
                   )
                 }
               >
@@ -371,7 +381,7 @@ export default function FintechClient() {
                   openLightbox(
                     "/images/heatmap.png",
                     "Market heatmap showing real-time asset performance",
-                    "Market Heatmap"
+                    "Market Heatmap",
                   )
                 }
               >
@@ -405,7 +415,7 @@ export default function FintechClient() {
                   openLightbox(
                     "/images/productstopush.png",
                     "AI-driven product recommendations for relationship managers",
-                    "Product Recommendations"
+                    "Product Recommendations",
                   )
                 }
               >
