@@ -39,7 +39,7 @@ export default function PropertyPulseClient() {
           }
         });
       },
-      { threshold: 0.1, rootMargin: "0px 0px -50px 0px" }
+      { threshold: 0.1, rootMargin: "0px 0px -50px 0px" },
     );
 
     const elements = document.querySelectorAll(".fade-up");
@@ -110,28 +110,27 @@ export default function PropertyPulseClient() {
                   </div>
                 </div>
 
-                {/* CTA Buttons */}
-                <div className="mt-4 sm:mt-0 sm:flex-shrink-0 flex gap-2 w-full sm:w-auto">
-                  <Link
-                    href="https://github.com/zhixuanevelynwu/propertypulse"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    aria-label="View PropertyPulse source code on GitHub"
-                    className="inline-flex items-center justify-center flex-1 sm:flex-none gap-2 rounded-xl bg-slate-800 text-white text-[15px] font-medium px-2.5 py-1.5 shadow-sm hover:bg-slate-700 hover:shadow-md transition-all duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-slate-900 focus-visible:ring-offset-2"
-                  >
-                    <Github className="w-4 h-4" strokeWidth={2.5} />
-                    Source
-                  </Link>
-                  <Link
-                    href="#"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    aria-label="View the live PropertyPulse project"
-                    className="inline-flex items-center justify-center flex-1 sm:flex-none gap-2 rounded-xl bg-blue-600 text-white text-[15px] font-medium px-2.5 py-1.5 shadow-sm hover:bg-blue-700 hover:shadow-md transition-all duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-slate-900 focus-visible:ring-offset-2"
-                  >
-                    Live Site
-                    <ExternalLink className="w-4 h-4" strokeWidth={2.5} />
-                  </Link>
+                {/* CTA Buttons - Disabled */}
+                <div className="mt-4 sm:mt-0 sm:flex-shrink-0 w-full sm:w-auto">
+                  <div className="flex gap-2 w-full sm:w-auto">
+                    <button
+                      disabled
+                      className="inline-flex items-center justify-center flex-1 sm:flex-none gap-2 rounded-xl bg-slate-300 text-slate-500 text-[15px] font-medium px-2.5 py-1.5 shadow-sm cursor-not-allowed opacity-60"
+                    >
+                      <Github className="w-4 h-4" strokeWidth={2.5} />
+                      Source
+                    </button>
+                    <button
+                      disabled
+                      className="inline-flex items-center justify-center flex-1 sm:flex-none gap-2 rounded-xl bg-blue-300 text-blue-500 text-[15px] font-medium px-2.5 py-1.5 shadow-sm cursor-not-allowed opacity-60"
+                    >
+                      Live Site
+                      <ExternalLink className="w-4 h-4" strokeWidth={2.5} />
+                    </button>
+                  </div>
+                  <p className="text-xs text-slate-500 mt-2 text-center sm:text-left">
+                    Source code and live site coming soon
+                  </p>
                 </div>
               </div>
 
