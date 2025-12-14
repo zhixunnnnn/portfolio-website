@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
-import { ArrowLeft, ExternalLink } from "lucide-react";
+import { ArrowLeft } from "lucide-react";
 
 export default function SP70Client() {
   const [bottomGradientOpacity, setBottomGradientOpacity] = useState(1);
@@ -34,7 +34,7 @@ export default function SP70Client() {
           }
         });
       },
-      { threshold: 0.1, rootMargin: "0px 0px -50px 0px" }
+      { threshold: 0.1, rootMargin: "0px 0px -50px 0px" },
     );
 
     const elements = document.querySelectorAll(".fade-up");
@@ -94,20 +94,6 @@ export default function SP70Client() {
                       70th Anniversary · 2024
                     </span>
                   </div>
-                </div>
-
-                {/* CTA Button */}
-                <div className="mt-4 sm:mt-0 sm:flex-shrink-0 w-full sm:w-auto">
-                  <Link
-                    href="https://sp70.sp.edu.sg"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    aria-label="View the live SP70 website"
-                    className="inline-flex items-center justify-center w-full sm:w-auto gap-2 rounded-xl bg-[#E4002B] text-white text-[15px] font-medium px-2.5 py-1.5 shadow-sm hover:bg-[#c9001f] hover:shadow-md transition-all duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-slate-900 focus-visible:ring-offset-2"
-                  >
-                    View Live Site
-                    <ExternalLink className="w-4 h-4" strokeWidth={2.5} />
-                  </Link>
                 </div>
               </div>
 
