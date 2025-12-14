@@ -21,7 +21,7 @@ export default function AboutPage() {
       {
         threshold: 0.1,
         rootMargin: "0px 0px -50px 0px",
-      }
+      },
     );
 
     const elements = document.querySelectorAll(".fade-up");
@@ -44,42 +44,15 @@ export default function AboutPage() {
       />
 
       {/* Header */}
-      <section className="pt-32 pb-12 px-6">
+      <section className="pt-32 pb-8 px-6">
         <div className="container mx-auto max-w-4xl">
           <Link
             href="/"
-            className="fade-up inline-flex items-center gap-2 text-sm text-slate-600 hover:text-slate-900 transition-colors mb-8"
+            className="fade-up inline-flex items-center gap-2 text-sm text-slate-600 hover:text-slate-900 transition-colors"
           >
             <ArrowLeft className="w-4 h-4" />
             <span>Back to Home</span>
           </Link>
-
-          <h1 className="fade-up text-3xl sm:text-4xl font-bold text-slate-900 mb-4">
-            About Me
-          </h1>
-          <p className="fade-up text-lg text-slate-600 max-w-2xl">
-            Full-stack developer passionate about building clean, performant web
-            applications.
-          </p>
-
-          <div className="fade-up flex items-center gap-3 mt-6">
-            <a
-              href={`mailto:${EMAIL}`}
-              className="inline-flex items-center gap-2 px-4 py-2 text-sm rounded-lg font-medium border border-slate-200 bg-white text-slate-700 hover:bg-slate-50 hover:border-slate-300 transition-all duration-200"
-            >
-              <Mail className="w-4 h-4" />
-              <span>Contact Me</span>
-            </a>
-            <a
-              href={LINKEDIN}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 px-4 py-2 text-sm rounded-lg font-medium border border-slate-200 bg-white text-slate-700 hover:bg-slate-50 hover:border-slate-300 transition-all duration-200"
-            >
-              <Linkedin className="w-4 h-4" />
-              <span>LinkedIn</span>
-            </a>
-          </div>
         </div>
       </section>
 
