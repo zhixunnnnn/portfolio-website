@@ -7,7 +7,7 @@ export default function Footer() {
         {/* Icons Row */}
         <div className="flex space-x-6">
           <a
-            href="https://instagram.com/yourhandle"
+            href="https://instagram.com/zhi.xun_"
             target="_blank"
             rel="noopener noreferrer"
             aria-label="Instagram"
@@ -16,7 +16,7 @@ export default function Footer() {
             <Instagram className="w-5 h-5" />
           </a>
           <a
-            href="https://linkedin.com/in/yourhandle"
+            href="https://www.linkedin.com/in/zhixunnn/"
             target="_blank"
             rel="noopener noreferrer"
             aria-label="LinkedIn"
@@ -25,7 +25,7 @@ export default function Footer() {
             <Linkedin className="w-5 h-5" />
           </a>
           <a
-            href="https://github.com/yourhandle"
+            href="https://github.com/zhixunnnnn"
             target="_blank"
             rel="noopener noreferrer"
             aria-label="GitHub"
