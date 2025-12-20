@@ -6,154 +6,159 @@
 
 /* Hide scrollbar utility */
 .scrollbar-hide {
-  -ms-overflow-style: none;
-  scrollbar-width: none;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
 }
 .scrollbar-hide::-webkit-scrollbar {
-  display: none;
+    display: none;
 }
 
 /* Text selection highlight */
 ::selection {
-  background-color: #64748b;
-  color: #ffffff;
+    background-color: #64748b;
+    color: #ffffff;
 }
 
 ::-moz-selection {
-  background-color: #64748b;
-  color: #ffffff;
+    background-color: #64748b;
+    color: #ffffff;
 }
 
 :root {
-  --radius: 0.625rem;
+    --radius: 0.625rem;
 
-  /* Dark background with slight blue tint */
-  --background: oklch(0.15 0.02 240);
-  --foreground: oklch(0.95 0.01 240);
+    /* Dark background with slight blue tint */
+    --background: oklch(0.15 0.02 240);
+    --foreground: oklch(0.95 0.01 240);
 
-  /* Slightly lighter dark for cards */
-  --card: oklch(0.18 0.02 240);
-  --card-foreground: oklch(0.95 0.01 240);
+    /* Slightly lighter dark for cards */
+    --card: oklch(0.18 0.02 240);
+    --card-foreground: oklch(0.95 0.01 240);
 
-  /* Popover styling */
-  --popover: oklch(0.18 0.02 240);
-  --popover-foreground: oklch(0.95 0.01 240);
+    /* Popover styling */
+    --popover: oklch(0.18 0.02 240);
+    --popover-foreground: oklch(0.95 0.01 240);
 
-  /* Light blue primary colors */
-  --primary: oklch(0.7 0.1 240);
-  --primary-foreground: oklch(0.15 0.02 240);
+    /* Light blue primary colors */
+    --primary: oklch(0.7 0.1 240);
+    --primary-foreground: oklch(0.15 0.02 240);
 
-  /* Subtle blue secondary colors */
-  --secondary: oklch(0.25 0.03 240);
-  --secondary-foreground: oklch(0.9 0.01 240);
+    /* Subtle blue secondary colors */
+    --secondary: oklch(0.25 0.03 240);
+    --secondary-foreground: oklch(0.9 0.01 240);
 
-  /* Muted colors */
-  --muted: oklch(0.22 0.02 240);
-  --muted-foreground: oklch(0.75 0.02 240);
+    /* Muted colors */
+    --muted: oklch(0.22 0.02 240);
+    --muted-foreground: oklch(0.75 0.02 240);
 
-  /* Accent colors - soft blue */
-  --accent: oklch(0.25 0.03 240);
-  --accent-foreground: oklch(0.9 0.01 240);
+    /* Accent colors - soft blue */
+    --accent: oklch(0.25 0.03 240);
+    --accent-foreground: oklch(0.9 0.01 240);
 
-  /* Destructive red with blue undertone */
-  --destructive: oklch(0.65 0.2 15);
+    /* Destructive red with blue undertone */
+    --destructive: oklch(0.65 0.2 15);
 
-  /* Subtle borders and inputs */
-  --border: oklch(0.25 0.03 240);
-  --input: oklch(0.25 0.03 240);
-  --ring: oklch(0.6 0.1 240);
+    /* Subtle borders and inputs */
+    --border: oklch(0.25 0.03 240);
+    --input: oklch(0.25 0.03 240);
+    --ring: oklch(0.6 0.1 240);
 
-  /* Chart colors - various blue hues */
-  --chart-1: oklch(0.65 0.15 240);
-  --chart-2: oklch(0.6 0.12 220);
-  --chart-3: oklch(0.55 0.1 260);
-  --chart-4: oklch(0.7 0.13 200);
-  --chart-5: oklch(0.5 0.11 280);
+    /* Chart colors - various blue hues */
+    --chart-1: oklch(0.65 0.15 240);
+    --chart-2: oklch(0.6 0.12 220);
+    --chart-3: oklch(0.55 0.1 260);
+    --chart-4: oklch(0.7 0.13 200);
+    --chart-5: oklch(0.5 0.11 280);
 
-  /* Sidebar styling */
-  --sidebar: oklch(0.16 0.02 240);
-  --sidebar-foreground: oklch(0.95 0.01 240);
-  --sidebar-primary: oklch(0.7 0.1 240);
-  --sidebar-primary-foreground: oklch(0.15 0.02 240);
-  --sidebar-accent: oklch(0.25 0.03 240);
-  --sidebar-accent-foreground: oklch(0.9 0.01 240);
-  --sidebar-border: oklch(0.25 0.03 240);
-  --sidebar-ring: oklch(0.6 0.1 240);
+    /* Sidebar styling */
+    --sidebar: oklch(0.16 0.02 240);
+    --sidebar-foreground: oklch(0.95 0.01 240);
+    --sidebar-primary: oklch(0.7 0.1 240);
+    --sidebar-primary-foreground: oklch(0.15 0.02 240);
+    --sidebar-accent: oklch(0.25 0.03 240);
+    --sidebar-accent-foreground: oklch(0.9 0.01 240);
+    --sidebar-border: oklch(0.25 0.03 240);
+    --sidebar-ring: oklch(0.6 0.1 240);
 }
 
 .sf-mono {
-  font-family: "SF Mono", sans-serif;
+    font-family: "SF Mono", sans-serif;
 }
 
 .line {
-  stroke-width: 6px;
-  stroke: white;
-  fill: none;
+    stroke-width: 6px;
+    stroke: white;
+    fill: none;
 }
 
 .menuOpen .lineTop {
-  transform: translate(0, 13px) rotate(45deg);
+    transform: translate(0, 13px) rotate(45deg);
 }
 
 .menuOpen .lineMid {
-  opacity: 0;
+    opacity: 0;
 }
 
 .menuOpen .lineBottom {
-  transform: translate(0, -13px) rotate(-45deg);
+    transform: translate(0, -13px) rotate(-45deg);
 }
 
 nav {
-  z-index: 50; /* Higher than overlay */
+    z-index: 50; /* Higher than overlay */
 }
 .mobile-menu {
-  transition: bottom 0.15s ease-in-out;
+    transition: bottom 0.15s ease-in-out;
 }
 #overlay {
-  opacity: 0;
-  visibility: hidden;
-  background-color: rgba(0, 0, 0, 0.5); /* Darkens background */
-  transition: opacity 0.15s linear, visibility 0s linear 0.15s;
-  z-index: 40; /* Ensure it's above content */
+    opacity: 0;
+    visibility: hidden;
+    background-color: rgba(0, 0, 0, 0.5); /* Darkens background */
+    transition:
+        opacity 0.15s linear,
+        visibility 0s linear 0.15s;
+    z-index: 40; /* Ensure it's above content */
 }
 #overlay.active {
-  opacity: 1;
-  visibility: visible;
-  transition-delay: 0s;
+    opacity: 1;
+    visibility: visible;
+    transition-delay: 0s;
 }
 .line {
-  stroke-width: 6px;
-  stroke: white;
-  transition: stroke 0.5s, transform 0.5s, stroke-dashoffset 0.5s;
+    stroke-width: 6px;
+    stroke: white;
+    transition:
+        stroke 0.5s,
+        transform 0.5s,
+        stroke-dashoffset 0.5s;
 }
 .lineTop {
-  stroke-dasharray: 40 40;
-  stroke-dashoffset: 25;
+    stroke-dasharray: 40 40;
+    stroke-dashoffset: 25;
 }
 .lineBottom {
-  stroke-dasharray: 40 40;
-  stroke-dashoffset: 60;
+    stroke-dasharray: 40 40;
+    stroke-dashoffset: 60;
 }
 .lineMid {
-  stroke-dasharray: 40 40;
+    stroke-dasharray: 40 40;
 }
 
 /* Toggle Behavior */
 #menu-toggle:checked + svg .line {
-  stroke: white;
+    stroke: white;
 }
 #menu-toggle:checked + svg .lineTop {
-  stroke-dashoffset: 0;
-  transform-origin: left;
-  transform: rotateZ(45deg) translate(-7px, -5px);
+    stroke-dashoffset: 0;
+    transform-origin: left;
+    transform: rotateZ(45deg) translate(-7px, -5px);
 }
 #menu-toggle:checked + svg .lineMid {
-  stroke-dashoffset: 40;
+    stroke-dashoffset: 40;
 }
 #menu-toggle:checked + svg .lineBottom {
-  stroke-dashoffset: 0;
-  transform-origin: left;
-  transform: rotateZ(-45deg) translate(-5px, 5px);
+    stroke-dashoffset: 0;
+    transform-origin: left;
+    transform: rotateZ(-45deg) translate(-5px, 5px);
 }
 
 /* @layer base {
@@ -168,126 +173,133 @@ nav {
 /* Adaptive fade gradients for top and bottom of pages */
 
 .fade-gradient-top {
-  background: linear-gradient(
-    to bottom,
-    var(--fade-surface, var(--background)) 0%,
-    font-family: -apple-system,
-    BlinkMacSystemFont,
-    "Segoe UI",
-    "Roboto",
-    "Oxygen",
-    "Ubuntu",
-    "Cantarell",
-    "Fira Sans",
-    "Droid Sans",
-    "Helvetica Neue",
-    Inter,
-    sans-serif; 85%,
-    transparent 100%
-  );
+    background: linear-gradient(
+        to bottom,
+        var(--fade-surface, var(--background)) 0%,
+        font-family: -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        "Roboto",
+        "Oxygen",
+        "Ubuntu",
+        "Cantarell",
+        "Fira Sans",
+        "Droid Sans",
+        "Helvetica Neue",
+        Inter,
+        sans-serif; 85%,
+        transparent 100%
+    );
 }
 
 .fade-gradient-bottom {
-  background: linear-gradient(
-    to top,
-    var(--fade-surface, var(--background)) 0%,
-    var(--fade-surface, var(--background)) 60%,
-    color-mix(in srgb, var(--fade-surface, var(--background)) 50%, transparent)
-      85%,
-    transparent 100%
-  );
+    background: linear-gradient(
+        to top,
+        var(--fade-surface, var(--background)) 0%,
+        var(--fade-surface, var(--background)) 60%,
+        color-mix(
+                in srgb,
+                var(--fade-surface, var(--background)) 50%,
+                transparent
+            )
+            85%,
+        transparent 100%
+    );
 }
 
 /* Fade-up scroll animations */
 .fade-up {
-  opacity: 0;
-  transform: translateY(30px);
-  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+    opacity: 0;
+    transform: translateY(30px);
+    transition:
+        opacity 0.6s ease-out,
+        transform 0.6s ease-out;
 }
 
 .fade-up.animate-in {
-  opacity: 1;
-  transform: translateY(0);
+    opacity: 1;
+    transform: translateY(0);
 }
 
 /* Dropdown menu slide-in animation */
 @keyframes slideIn {
-  from {
-    opacity: 0;
-    transform: translateX(10px);
-  }
-  to {
-    opacity: 1;
-    transform: translateX(0);
-  }
+    from {
+        opacity: 0;
+        transform: translateX(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
 }
 
 .animate-slideIn {
-  animation: slideIn 0.3s ease-out forwards;
+    animation: slideIn 0.3s ease-out forwards;
 }
 
 /* Spotlight search animations - inspired by olivierifrah.com */
 @keyframes spotlight-backdrop-in {
-  from {
-    opacity: 0;
-    backdrop-filter: blur(0px);
-  }
-  to {
-    opacity: 1;
-    backdrop-filter: blur(8px);
-  }
+    from {
+        opacity: 0;
+        backdrop-filter: blur(0px);
+    }
+    to {
+        opacity: 1;
+        backdrop-filter: blur(8px);
+    }
 }
 
 @keyframes spotlight-modal-in {
-  0% {
-    opacity: 0;
-    transform: scale(0.98) translateY(-20px);
-  }
-  100% {
-    opacity: 1;
-    transform: scale(1) translateY(0);
-  }
+    0% {
+        opacity: 0;
+        transform: scale(0.98) translateY(-20px);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1) translateY(0);
+    }
 }
 
 @keyframes spotlight-item-in {
-  0% {
-    opacity: 0;
-    transform: translateY(8px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
+    0% {
+        opacity: 0;
+        transform: translateY(8px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 .spotlight-backdrop {
-  animation: spotlight-backdrop-in 0.3s cubic-bezier(0.32, 0.72, 0, 1) forwards;
+    animation: spotlight-backdrop-in 0.3s cubic-bezier(0.32, 0.72, 0, 1)
+        forwards;
 }
 
 .spotlight-modal {
-  animation: spotlight-modal-in 0.4s cubic-bezier(0.32, 0.72, 0, 1) forwards;
+    animation: spotlight-modal-in 0.4s cubic-bezier(0.32, 0.72, 0, 1) forwards;
 }
 
 @keyframes spotlight-modal-out {
-  0% {
-    opacity: 1;
-    transform: scale(1) translateY(0);
-  }
-  100% {
-    opacity: 0;
-    transform: scale(0.98) translateY(-10px);
-  }
+    0% {
+        opacity: 1;
+        transform: scale(1) translateY(0);
+    }
+    100% {
+        opacity: 0;
+        transform: scale(0.98) translateY(-10px);
+    }
 }
 
 .spotlight-modal-out {
-  animation: spotlight-modal-out 0.2s cubic-bezier(0.32, 0.72, 0, 1) forwards;
+    animation: spotlight-modal-out 0.2s cubic-bezier(0.32, 0.72, 0, 1) forwards;
 }
 
 .spotlight-item {
-  opacity: 0;
-  animation: spotlight-item-in 0.35s cubic-bezier(0.32, 0.72, 0, 1) forwards;
+    opacity: 0;
+    animation: spotlight-item-in 0.35s cubic-bezier(0.32, 0.72, 0, 1) forwards;
 }
 
 .cubic-bezier-smooth {
-  transition-timing-function: cubic-bezier(0.32, 0.72, 0, 1);
+    transition-timing-function: cubic-bezier(0.32, 0.72, 0, 1);
 }

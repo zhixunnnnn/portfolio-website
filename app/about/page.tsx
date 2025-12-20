@@ -21,7 +21,7 @@ export default function AboutPage() {
       {
         threshold: 0.1,
         rootMargin: "0px 0px -50px 0px",
-      },
+      }
     );
 
     const elements = document.querySelectorAll(".fade-up");
@@ -427,8 +427,14 @@ export default function AboutPage() {
             {/* Secondary School */}
             <div className="group py-6">
               <div className="flex flex-col sm:flex-row sm:items-start gap-4">
-                <div className="flex-shrink-0 w-10 h-10 rounded-lg overflow-hidden bg-slate-100 flex items-center justify-center">
-                  <span className="text-lg">🎓</span>
+                <div className="flex-shrink-0 w-10 h-10 rounded-lg overflow-hidden">
+                  <Image
+                    src="/images/compassvale_logo.png"
+                    alt="Compassvale Secondary School"
+                    width={40}
+                    height={40}
+                    className="w-full h-full object-cover"
+                  />
                 </div>
                 <div className="flex-1 min-w-0">
                   <div className="flex flex-col sm:flex-row sm:items-baseline sm:justify-between gap-1 sm:gap-4">

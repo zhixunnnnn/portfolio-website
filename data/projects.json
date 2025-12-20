@@ -1,5 +1,13 @@
 [
   {
+    "id": "daelim-hackathon",
+    "title": "Daelim + SoC Hackathon - AstraSemi Operations Platform",
+    "description": "AI-powered semiconductor operations assistant with 4 intelligent modules for data analysis and component identification",
+    "image": "",
+    "tags": ["React", "TypeScript", "Python", "Flask", "OpenAI", "AI"],
+    "hasPage": true
+  },
+  {
     "id": "fintech-hackathon",
     "title": "PolyFinTech100 API Hackathon - HSBC Intelligent Banking",
     "description": "Focused on intelligent banking workflows and AI-powered customer insights",
